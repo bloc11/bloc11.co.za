@@ -25,6 +25,7 @@ python -m SimpleHTTPServer 8080 index.html
 ### TODO:
 
 - Target header links
+- Fix some non-responsive content
 - Prepare copy
 - Handle contact form submit
 - Add social links
