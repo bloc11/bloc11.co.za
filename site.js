@@ -103,9 +103,7 @@ function scrollIt(element) {
 
 var btns = document.querySelectorAll('.js-btn');
 var sections = document.querySelectorAll('.js-section');
-var done = function done() {
-  console.log('done');
-};
+var done = function done() {};
 
 btns[0].addEventListener('click', function (e) {
   e.preventDefault();
