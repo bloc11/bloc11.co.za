@@ -1,0 +1,83 @@
+/***********
+ * Font Paths
+ **********/
+
+ $proximanova-font-path: "/fonts/proximanova/" !default;
+
+
+/***********
+ * Font Includes
+ **********/
+
+@include font-face("proximanova", $proximanova-font-path+"proximanova.thin", 200,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.thinitalic", 200, italic,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.light", 300, $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.light.italic", 300, italic,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.regular", normal, $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.regular.italic", normal, italic,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.bold", bold,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.bold.italic", bold, italic,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.ebold", 600,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.ebold.italic", 600, italic,  $file-formats: svg eot ttf woff);
+
+
+h2 {
+  color: $color-orange;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 50px 30px;
+  text-align: center;
+
+  &.light {
+    color: $color-white;
+  }
+
+  &.underline {
+    border-bottom: 2px solid $color-white;
+    display: inline-block;
+    padding: 50px 0 20px 0;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:after, &:before {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 10px;
+      background-color: $color-white;
+      bottom: -8px;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    &:before {
+      left: 0;
+    }
+  }
+}
+
+h3 {
+  color: $color-grey;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+p.dark {
+  color: $color-dark-text;
+}
+
+p.center {
+  text-align: center;
+}

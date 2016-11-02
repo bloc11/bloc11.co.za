@@ -1,0 +1,55 @@
+a {
+  color: $color-grey;
+  text-decoration: none;
+}
+
+
+body {
+  font-family: $font;
+  letter-spacing: 2px;
+}
+
+.full-width {
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: 0 auto;
+}
+
+input[type=text], input[type=email] {
+  border: 1px solid $color-input-border;
+  padding: 10px;
+  font-size: 15px;
+  width: 70%;
+  margin-bottom: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+label {
+  color: $color-orange;
+  margin-left: 10px;
+}
+
+textarea {
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid $color-input-border;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+  margin: 0;
+}
+
+input[type=submit] {
+  border: none;
+  background-color: $color-orange;
+  color: $color-white;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 14px;
+  float: right;
+}
