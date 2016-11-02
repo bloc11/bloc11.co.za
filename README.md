@@ -27,6 +27,7 @@ python -m SimpleHTTPServer 8080 index.html
 - Target header links
 - Fix some non-responsive content
 - Prepare copy
+- Add favicon
 - Handle contact form submit
 - Add social links
 - Add OG (social) meta tags
