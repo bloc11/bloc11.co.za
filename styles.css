@@ -833,11 +833,11 @@ nav[role=main] {
     margin-top: 30px; }
 
 .gallery {
-  background-image: url(/images/inprogress.jpg);
+  background-image: url(/images/shroom.jpg);
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
-  height: 50vh; }
+  height: 80vh; }
 
 .facilities {
   background-color: #bcbdc0;
