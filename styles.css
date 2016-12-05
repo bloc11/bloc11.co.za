@@ -812,7 +812,7 @@ nav[role=main] {
     .packages .wrapper:after {
       bottom: 0; }
   .packages .name {
-    font-size: 60px;
+    font-size: 30px;
     text-transform: uppercase;
     color: #fafbff;
     text-align: left;
