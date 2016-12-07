@@ -812,7 +812,7 @@ nav[role=main] {
     .packages .wrapper:after {
       bottom: 0; }
   .packages .name {
-    font-size: 30px;
+    font-size: 60px;
     text-transform: uppercase;
     color: #fafbff;
     text-align: left;
@@ -915,8 +915,17 @@ nav[role=main] {
 
 .location {
   width: 100%;
-  height: 60vh; }
+  height: 60vh;
+  position: relative; }
   .location #map {
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none; }
+    height: 100%; }
+  .location #map-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+    .location #map-overlay.hide {
+      display: none; }

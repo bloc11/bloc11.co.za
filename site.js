@@ -140,3 +140,7 @@ function init() {
     title: 'Bloc 11'
   });
 }
+
+document.getElementById('map-overlay').addEventListener('click', function (e) {
+  document.getElementById('map-overlay').classList.add('hide');
+});
