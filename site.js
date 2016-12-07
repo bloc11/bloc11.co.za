@@ -142,5 +142,5 @@ function init() {
 }
 
 document.getElementById('map-overlay').addEventListener('click', function (e) {
-  document.getElementById('map-overlay').classList.add('hide');
+  e.target.classList.add('hide');
 });

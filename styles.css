@@ -713,6 +713,9 @@ nav[role=main] {
   .welcome .tagline {
     text-transform: uppercase;
     letter-spacing: 4px; }
+    .welcome .tagline.opening {
+      margin-top: 10px;
+      font-size: .9em; }
 
 @media screen and (min-width: 380px) {
   .welcome .icon-logo {
@@ -787,13 +790,12 @@ nav[role=main] {
   padding: 30px 0; }
   .packages .option {
     box-sizing: border-box;
-    width: 33%;
-    float: left;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 50px; }
   .packages .wrapper {
     box-sizing: border-box;
     width: 240px;
-    height: 240px;
+    min-height: 240px;
     padding: 20px 20px 20px 0;
     border-top: 2px solid #939598;
     border-right: 2px solid #939598;
@@ -819,18 +821,28 @@ nav[role=main] {
     margin-top: 40px;
     letter-spacing: 0;
     font-weight: 600; }
+    .packages .name.option3 {
+      font-size: 37px;
+      line-height: 1; }
   .packages .price {
     font-size: 24px;
     color: #F26522;
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 20px; }
   .packages .info {
     width: 240px;
     font-size: 12px;
     line-height: 1.5;
     color: #6d6b71;
     text-align: left;
-    display: inline-block;
-    margin-top: 30px; }
+    display: block;
+    margin: 30px auto 0; }
+
+@media screen and (min-width: 960px) {
+  .packages .option {
+    width: 33%;
+    float: left;
+    margin-bottom: 0; } }
 
 .gallery {
   background-image: url(/images/shroom.jpg);
@@ -851,8 +863,7 @@ nav[role=main] {
     overflow: auto; }
     .facilities ul li {
       box-sizing: border-box;
-      float: left;
-      width: 25%;
+      margin-bottom: 40px;
       padding: 0 20px;
       text-align: center;
       color: #fafbff; }
@@ -871,6 +882,17 @@ nav[role=main] {
       font-size: 13px;
       line-height: 1.5; }
 
+@media screen and (min-width: 600px) {
+  .facilities ul li {
+    float: left;
+    width: 50%; } }
+
+@media screen and (min-width: 960px) {
+  .facilities ul li {
+    float: left;
+    width: 25%;
+    margin-bottom: 0; } }
+
 .contact {
   background-color: #fafbff;
   padding-bottom: 80px; }
@@ -885,13 +907,11 @@ nav[role=main] {
     margin: 0 auto;
     text-align: center; }
   .contact .wrapper {
-    overflow: auto;
     margin-top: 50px; }
   .contact .details {
     box-sizing: border-box;
-    float: left;
-    width: 35%;
-    padding-left: 3%;
+    width: 80%;
+    margin: 0 auto;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.5; }
