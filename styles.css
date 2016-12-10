@@ -845,7 +845,7 @@ nav[role=main] {
     margin-bottom: 0; } }
 
 .gallery {
-  background-image: url(/images/shroom.jpg);
+  background-image: url(/images/wall_img.jpg);
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
@@ -907,7 +907,9 @@ nav[role=main] {
     margin: 0 auto;
     text-align: center; }
   .contact .wrapper {
-    margin-top: 50px; }
+    margin-top: 50px;
+    text-align: center;
+  }
   .contact .details {
     box-sizing: border-box;
     width: 80%;

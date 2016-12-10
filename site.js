@@ -135,7 +135,7 @@ function init() {
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, mapOptions);
   var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(-33.911329, 18.471945),
+    position: new google.maps.LatLng(-33.910382, 18.472563),
     map: map,
     title: 'Bloc 11'
   });
