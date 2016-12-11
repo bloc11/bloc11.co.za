@@ -109,7 +109,7 @@ var done = function done() {};
   btns[i].addEventListener('click', function (e) {
     e.preventDefault();
     scrollIt(sections[i], 300, 'easeInQuad', done);
-  });*/
+  }); // wtf this does not work? */
 
 btns[0].addEventListener('click', function (e) {
     e.preventDefault();
