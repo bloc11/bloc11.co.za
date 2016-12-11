@@ -105,9 +105,15 @@ var btns = document.querySelectorAll('.js-btn');
 var sections = document.querySelectorAll('.js-section');
 var done = function done() {};
 
+/*for (i = 0; i < 5; i++) {
+  btns[i].addEventListener('click', function (e) {
+    e.preventDefault();
+    scrollIt(sections[i], 300, 'easeInQuad', done);
+  });*/
+
 btns[0].addEventListener('click', function (e) {
-  e.preventDefault();
-  scrollIt(sections[0], 300, 'easeInQuad', done);
+    e.preventDefault();
+    scrollIt(sections[0], 300, 'easeInQuad', done);
 });
 
 btns[1].addEventListener('click', function (e) {
@@ -123,6 +129,11 @@ btns[2].addEventListener('click', function (e) {
 btns[3].addEventListener('click', function (e) {
   e.preventDefault();
   scrollIt(sections[3], 300, 'easeInQuad', done);
+});
+
+btns[4].addEventListener('click', function (e) {
+  e.preventDefault();
+  scrollIt(sections[4], 300, 'easeInQuad', done);
 });
 
 function init() {

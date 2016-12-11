@@ -658,7 +658,7 @@ nav[role=main] {
     margin: 0 10%; }
     nav[role=main] ul li {
       float: left;
-      width: 25%;
+      width: 20%;
       text-align: center;
       position: relative; }
       nav[role=main] ul li:before {
