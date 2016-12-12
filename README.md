@@ -1,3 +1,5 @@
+Bloc 11 main website
+
 ### Compile sass
 
 ### Prerequisites
@@ -24,16 +26,4 @@ python -m SimpleHTTPServer 8080 index.html
 
 ### TODO:
 
-- Target header links
-- Fix some non-responsive content
-- Prepare copy
-- Add favicon
-- Handle contact form submit
-- Add social links
-- Add OG (social) meta tags
-- Replace the marker on the map
-- Newsletter signup form
-- Add a testimonials slide
-- Slide a gallery images
-- Minify css/js/html for deployment
 - Go climb
