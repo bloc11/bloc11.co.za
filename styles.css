@@ -824,6 +824,9 @@ nav[role=main] {
     .packages .name.option3 {
       font-size: 37px;
       line-height: 1; }
+    .packages .name.option4 {
+      font-size: 37px;
+      line-height: 1; }
   .packages .price {
     font-size: 24px;
     color: #F26522;
@@ -934,6 +937,12 @@ nav[role=main] {
     width: 25px; }
   .contact a {
     color: #F26522; }
+
+@media screen and (min-width: 960px) {
+  .center {
+    margin-left: 40%;
+  }
+}
 
 .location {
   width: 100%;
