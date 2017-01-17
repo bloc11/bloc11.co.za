@@ -939,7 +939,7 @@ nav[role=main] {
     color: #F26522; }
 
 @media screen and (min-width: 960px) {
-  .center {
+  .box-center {
     margin-left: 40%;
   }
 }
