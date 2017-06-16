@@ -56,13 +56,13 @@ class Donation(Resource):
         price = request.args['sum'][0]
         conf = get_config()
         s = Session()
-        t = list(s.execute(select([total])))[0][0]
+        t = list(s.execute(select([total])))[0][1]
         s.commit()
         url = conf.get('payment', 'base') + '/v1/checkouts'
         data = {
             'authentication.userId' : conf.get('payment', 'userId'),
             'authentication.password' : conf.get('payment', 'password'),
-            'authentication.entityId' : conf.get('payment', 'recurringEntityId'),
+            'authentication.entityId' : conf.get('payment', 'entityId'),
             'amount' : price + ".00",
             'currency' : 'ZAR',
             'paymentType' : 'DB',
