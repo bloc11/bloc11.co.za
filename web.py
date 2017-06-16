@@ -88,15 +88,15 @@ class Finish(Resource):
             s = Session()
             t = list(s.execute(select([total])))[0][1]
             t += float(amount)
-            s.execute(total.update().values({'total': t}).where(total.c.id == 0))
             s.execute(payments.insert().values({'timestamp': time.time(), 'credit_card_id': r['id'], 
                 'name': r['card']['holder'], 'outcome': r['result']['description']}))
-            s.commit()
             #payments.insert
             if re.search("^(000\.000\.|000\.100\.1|000\.[36])", r['result']['code']):
+                s.execute(total.update().values({'total': t}).where(total.c.id == 0))
                 d = {'success': True}
             else:
                 d = {'success': False, 'error': r['result']['description']}
+            s.commit()
         request.write(json.dumps(d))
         request.finish()
 
@@ -125,5 +125,5 @@ resource.putChild("get_progress", Progress())
 resource.putChild("donation", Donation())
 resource.putChild("finish_check", Finish())
 factory = Site(resource)
-reactor.listenTCP(8888, factory)
+reactor.listenTCP(8887, factory)
 reactor.run()
