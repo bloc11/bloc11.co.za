@@ -634,7 +634,6 @@ header.main {
   left: 0;
   top: 0;
   right: 0;
-  padding-top: 20px;
   z-index: 1;
   transition: .3s ease-in-out; }
   header.main a {
@@ -649,7 +648,7 @@ header.main {
 
 @media screen and (min-width: 380px) {
 header.main {
-    height: 50px;
+    height: 84px;
 }
 }
 
@@ -977,3 +976,80 @@ nav[role=main] {
     height: 100%; }
     .location #map-overlay.hide {
       display: none; }
+
+.jc-fund {
+  padding: 10px 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.jc-fund:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.jc-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .4s ease-out;
+}
+
+.jc-modal.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.jc-modal .more-info {
+  width: 80vw;
+  height: 90vh;
+  background-color: white;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  overflow: auto;
+  text-align: center;
+}
+
+.jc-modal h1 {
+  border-bottom: 2px solid #ccc;
+  padding: 10px 0 20px;
+  font-size: 1.5rem;
+}
+
+.jc-modal p {
+  display: block;
+  padding: 10px 20px 20px 20px;
+  text-align: left;
+}
+
+.jc-modal a {
+  color: white;
+  background-color: #F26522;
+  border: none;
+  padding: 10px 30px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.jc-image {
+  height: 50vh;
+  background-image: url(/images/juliachen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+}

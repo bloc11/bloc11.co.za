@@ -1,5 +1,22 @@
 var didScroll = false;
 
+$(document).ready(function(){
+    $.ajax("/get_progress").done(function (v) {
+        var t = JSON.parse(v);
+        total = Math.floor(t['total']);
+        $("#progress").html("R" + total + " of R125 000");
+        $(".w3-blue")[0].style['width'] = ((total / 125000) * 100) + "%";
+    });
+    $("#finish")[0].action = $("#finish")[0].action;
+});
+
+function run_donation()
+{
+    $.ajax("/donation?sum=" + $("#val")[0].value).done(function (v) {
+        eval(JSON.parse(v)['form']);
+    })
+}
+
 window.onscroll = function scroll(e) {
   didScroll = true;
 }
@@ -154,4 +171,12 @@ function init() {
 
 document.getElementById('map-overlay').addEventListener('click', function (e) {
   e.target.classList.add('hide');
+});
+
+document.getElementById('jc-fund-banner').addEventListener('click', function (e) {
+  document.getElementById('jc-fund-modal').classList.add('show');
+});
+
+document.getElementById('jc-fund-modal').addEventListener('click', function (e) {
+  e.target.classList.remove('show');
 });
