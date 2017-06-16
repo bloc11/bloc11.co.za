@@ -107,7 +107,7 @@ class Finish(Resource):
         params = "&".join(["%s=%s" % (k, v) for (k, v) in [
          ('authentication.userId', conf.get('payment', 'userId')),
          ('authentication.password', conf.get('payment', 'password')),
-         ('authentication.entityId', conf.get('payment', 'recurringEntityId')),
+         ('authentication.entityId', conf.get('payment', 'entityId')),
         ]])
         d = treq.get(url + "?" + params)
         d.addCallback(self.continue_checking, request)
