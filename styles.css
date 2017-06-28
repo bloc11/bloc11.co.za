@@ -629,7 +629,7 @@ input[type=submit] {
   float: right; }
 
 header.main {
-  height: 100px;
+  height: 200px;
   position: fixed;
   left: 0;
   top: 0;
@@ -653,7 +653,7 @@ header.main {
 }
 
 nav[role=main] {
-  max-width: 960px;
+  max-width: 1100px;
   min-width: 320px;
   margin: 0 auto; }
 
@@ -665,14 +665,14 @@ nav[role=main] {
 
     nav[role=main] ul li {
       float: left;
-      width: 25%;
+      width: 28%;
       text-align: center;
       position: relative; }
 
     @media screen and (min-width: 380px) {
     nav[role=main] ul li {
       float: left;
-      width: 16%;
+      width: 14%;
       text-align: center;
       position: relative; }
   }
@@ -714,7 +714,7 @@ nav[role=main] {
   background-color: #F26522;
   background-image: url(/images/pattern-bg.svg);
   z-index: 0;
-  padding-top: 20vh;
+  padding-top: 30vh;
   box-sizing: border-box; }
   .welcome .brand {
     max-width: 960px;
