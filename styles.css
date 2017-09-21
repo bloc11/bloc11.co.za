@@ -636,8 +636,8 @@ header.main {
   right: 0;
   z-index: 1;
   transition: .3s ease-in-out; }
-  header.main a {
-    color: #fafbff; }
+#  header.main a {
+#    color: #fafbff; }
   header.main.floating {
     padding-top: 0;
     background-color: #fafbff; }
@@ -978,18 +978,23 @@ nav[role=main] {
       display: none; }
 
 .jc-fund {
-  padding: 10px 0;
+  padding: 5px 0;
   text-align: center;
   background-color: black;
   color: white;
-  font-size: .8rem;
+  font-size: 1.8rem;
   cursor: pointer;
+}
+
+.jc-fund a:hover {
+  color: black
 }
 
 .jc-fund:hover {
   background-color: white;
   color: black;
   font-weight: bold;
+  font-color: black;
 }
 
 .jc-modal {
