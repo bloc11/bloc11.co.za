@@ -7,6 +7,5 @@ $(document).ready(function(){
         } else {
             $("h1").html("Error: " + res.error);
         }
-        setTimeout("location.href = '" + '/' + "';", 2000);
     });
  });

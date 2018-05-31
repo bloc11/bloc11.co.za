@@ -1058,3 +1058,21 @@ nav[role=main] {
   background-position-y: center;
   background-position-x: center;
 }
+
+#container2 {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.spaced {
+  padding-bottom: 20px;
+}
+
+#reference {
+  width: 30%;
+  padding-bottom: 20px;
+}
+
+#paybutton {
+  width: 30%;
+}
