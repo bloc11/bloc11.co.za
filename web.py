@@ -44,6 +44,37 @@ class Pay(Resource):
         d.addCallback(self.payment_gateway_continue, request)
         return NOT_DONE_YET
 
+class Donate(Resource):
+    isLeaf = True
+
+    @inlineCallbacks
+    def payment_gateway_continue(self, res, request):
+        r = yield res.json()
+        conf = get_config()
+        url = conf.get('payment', 'base') + "/v1/paymentWidgets.js?checkoutId=" + r['id']
+        r = yield treq.get(url)
+        r = yield r.text("utf-8")
+        request.write(json.dumps({'form': r}))
+        request.finish()
+
+    def render_GET(self, request):
+        price = request.args['price'][0]
+        ref = request.args['reference'][0]
+        conf = get_config()
+        url = conf.get('payment', 'base') + '/v1/checkouts'
+        data = {
+            'authentication.userId' : conf.get('payment', 'userId'),
+            'authentication.password' : conf.get('payment', 'password'),
+            'authentication.entityId' : conf.get('payment', 'entityId'),
+            'amount' : price + ".00",
+            'currency' : 'ZAR',
+            'paymentType' : 'DB',
+            'merchantTransactionId': "dreamhigher" + str(int(time.time())) + "-" + ref,
+            }
+        d = treq.post(url, data)
+        d.addCallback(self.payment_gateway_continue, request)
+        return NOT_DONE_YET
+
 class Finish(Resource):
     isLeaf = True
 
@@ -65,8 +96,9 @@ class Finish(Resource):
         request.finish()
 
     def render_GET(self, request):
+        print "foo"
         conf = get_config()
-        print request.args
+        print >>sys.stderr, request.args
         url = conf.get('payment', 'base') + request.args['resourcePath'][0]
         params = "&".join(["%s=%s" % (k, v) for (k, v) in [
          ('authentication.userId', conf.get('payment', 'userId')),
@@ -82,6 +114,7 @@ if len(sys.argv) > 1 and sys.argv[1] == '--create':
 
 resource = File(os.getcwd())
 resource.putChild("pay", Pay())
+resource.putChild("donate", Donate())
 resource.putChild("finish_check", Finish())
 factory = Site(resource)
 reactor.listenTCP(8887, factory)
