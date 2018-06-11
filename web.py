@@ -96,9 +96,8 @@ class Finish(Resource):
         request.finish()
 
     def render_GET(self, request):
-        print "foo"
         conf = get_config()
-        print >>sys.stderr, request.args
+        print request.args
         url = conf.get('payment', 'base') + request.args['resourcePath'][0]
         params = "&".join(["%s=%s" % (k, v) for (k, v) in [
          ('authentication.userId', conf.get('payment', 'userId')),
