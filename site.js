@@ -1,20 +1,19 @@
 var didScroll = false;
 
-$(document).ready(function(){
-    $.ajax("/get_progress").done(function (v) {
-        var t = JSON.parse(v);
-        total = Math.floor(t['total']);
-        $("#progress").html("R" + total + " of R125 000");
-        $(".w3-blue")[0].style['width'] = ((total / 125000) * 100) + "%";
-    });
-    $("#finish")[0].action = $("#finish")[0].action;
+$(document).ready(function () {
+  $.ajax("/get_progress").done(function (v) {
+    var t = JSON.parse(v);
+    total = Math.floor(t['total']);
+    $("#progress").html("R" + total + " of R125 000");
+    $(".w3-blue")[0].style['width'] = ((total / 125000) * 100) + "%";
+  });
+  $("#finish")[0].action = $("#finish")[0].action;
 });
 
-function run_donation()
-{
-    $.ajax("/donation?sum=" + $("#val")[0].value).done(function (v) {
-        eval(JSON.parse(v)['form']);
-    })
+function run_donation() {
+  $.ajax("/donation?sum=" + $("#val")[0].value).done(function (v) {
+    eval(JSON.parse(v)['form']);
+  })
 }
 
 window.onscroll = function scroll(e) {
@@ -22,7 +21,7 @@ window.onscroll = function scroll(e) {
 }
 
 function throttle() {
-  if(didScroll) {
+  if (didScroll) {
     didScroll = false;
     if (window.pageYOffset > 50) {
       document.getElementById('header').classList.add('floating')
@@ -120,7 +119,7 @@ function scrollIt(element) {
 
 var btns = document.querySelectorAll('.js-btn');
 var sections = document.querySelectorAll('.js-section');
-var done = function done() {};
+var done = function done() { };
 
 /*for (i = 0; i < 5; i++) {
   btns[i].addEventListener('click', function (e) {
@@ -129,8 +128,8 @@ var done = function done() {};
   }); // wtf this does not work? */
 
 btns[0].addEventListener('click', function (e) {
-    e.preventDefault();
-    scrollIt(sections[0], 300, 'easeInQuad', done);
+  e.preventDefault();
+  scrollIt(sections[0], 300, 'easeInQuad', done);
 });
 
 btns[1].addEventListener('click', function (e) {
@@ -158,7 +157,7 @@ function init() {
     zoom: 15,
     center: new google.maps.LatLng(-33.911329, 18.471945),
     //icon: "http://localhost:8080/images/marker.png",
-    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+    styles: [{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 16 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 21 }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#dedede" }, { "lightness": 21 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "lightness": 16 }] }, { "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#333333" }, { "lightness": 40 }] }, { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#f2f2f2" }, { "lightness": 19 }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#fefefe" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#fefefe" }, { "lightness": 17 }, { "weight": 1.2 }] }]
   };
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, mapOptions);

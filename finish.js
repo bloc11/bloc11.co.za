@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $.ajax("/finish_check" + location.search).done(function (res) {
         console.log(res);
         res = JSON.parse(res);
@@ -8,4 +8,4 @@ $(document).ready(function(){
             $("h1").html("Error: " + res.error);
         }
     });
- });
+});
