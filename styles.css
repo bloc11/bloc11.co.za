@@ -696,7 +696,6 @@ nav[role=main] {
   margin: 0 auto;
   height: 100vh;
   background-color: #F26522;
-  background-image: url(/images/pattern-bg.svg);
   z-index: 0;
   padding-top: 20vh;
   box-sizing: border-box; }
