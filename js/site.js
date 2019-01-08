@@ -25,6 +25,20 @@
 // Smooth navigation button scrolling
 (function () {
 
+  // Add onClick events to buttons that scroll smoothly to their href targets
+  var nav_btns = document.querySelectorAll('.js-btn');
+
+  Array.prototype.forEach.call(nav_btns, function (node) {
+    var target_id = node.getAttribute('href').replace('#', '');
+    var target = document.getElementById(target_id);
+    if (target) {
+      node.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollToElementSmoothly(target, 300, 'easeInQuad');
+      });
+    }
+  });
+
   function scrollToElementSmoothly(element) {
     var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
     var easing = arguments.length <= 2 || arguments[2] === undefined ? 'linear' : arguments[2];
@@ -103,20 +117,6 @@
     }
     scroll();
   }
-
-  // Add onClick events to buttons that scroll smoothly to their href targets
-  var nav_btns = document.querySelectorAll('.js-btn');
-
-  Array.prototype.forEach.call(nav_btns, function (node) {
-    var target_id = node.getAttribute('href').replace('#', '');
-    var target = document.getElementById(target_id);
-    if (target) {
-      node.addEventListener('click', function (e) {
-        e.preventDefault();
-        scrollToElementSmoothly(target, 300, 'easeInQuad');
-      });
-    }
-  });
 
 })();
 

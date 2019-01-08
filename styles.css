@@ -634,14 +634,14 @@ header.main {
   top: 0;
   right: 0;
   padding-top: 20px;
-  height: 50px;
   z-index: 1;
   transition: .3s ease-in-out; }
   header.main a {
     color: #fafbff; }
   header.main.floating {
     padding-top: 0;
-    background-color: #fafbff; }
+    background-color: #fafbff;
+    opacity: 0.95; }
     header.main.floating a {
       color: #373734; }
     header.main.floating nav[role=main] ul li:before {
@@ -681,15 +681,83 @@ nav[role=main] {
       line-height: 50px;
       text-transform: uppercase;
       display: block;
-      font-size: 10px;
+      font-size: 12px;
       position: relative;
       z-index: 1;
       letter-spacing: 1px; }
 
-@media screen and (min-width: 380px) {
-  nav[role=main] ul a {
+@media screen and (max-width: 600px) {
+  nav[role=main] ul {
+    margin: 0 5px; }
+    nav[role=main] ul a {
+      font-size: 10px;
+      letter-spacing: 2px;
+      height: 40px;
+      line-height: 40px; } }
+
+.packages {
+  overflow: auto;
+  padding: 30px 0; }
+  .packages .option {
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px; }
+  .packages .wrapper {
+    box-sizing: border-box;
+    width: 240px;
+    min-height: 240px;
+    padding: 20px 20px 20px 0;
+    border-top: 2px solid #939598;
+    border-right: 2px solid #939598;
+    border-bottom: 2px solid #939598;
+    display: inline-block;
+    position: relative; }
+    .packages .wrapper:before, .packages .wrapper:after {
+      content: "";
+      width: 2px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      background-color: #939598; }
+    .packages .wrapper:before {
+      top: 0; }
+    .packages .wrapper:after {
+      bottom: 0; }
+  .packages .title {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fafbff;
+    text-align: left;
+    margin-top: 40px;
+    letter-spacing: 0;
+    font-weight: 600; }
+    .packages .title.option3 {
+      font-size: 37px;
+      line-height: 1; }
+  .packages .price {
+    font-size: 24px;
+    color: #F26522;
+    text-align: left;
+    margin-bottom: 20px; }
+  .packages .text {
+    font-size: 24px;
+    color: #F26522;
+    text-align: left;
+    margin-bottom: 20px; }
+  .packages .info {
+    width: 240px;
     font-size: 12px;
-    letter-spacing: 2px; } }
+    line-height: 1.5;
+    color: #6d6b71;
+    text-align: left;
+    display: block;
+    margin: 30px auto 0; }
+
+@media screen and (min-width: 960px) {
+  .packages .option {
+    width: 33%;
+    float: left;
+    margin-bottom: 0; } }
 
 .welcome {
   width: 100%;
@@ -803,64 +871,8 @@ nav[role=main] {
   .prices p {
     margin: 0 120px; } }
 
-.packages {
-  overflow: auto;
-  padding: 30px 0; }
-  .packages .option {
-    box-sizing: border-box;
-    text-align: center;
-    margin-bottom: 50px; }
-  .packages .wrapper {
-    box-sizing: border-box;
-    width: 240px;
-    min-height: 240px;
-    padding: 20px 20px 20px 0;
-    border-top: 2px solid #939598;
-    border-right: 2px solid #939598;
-    border-bottom: 2px solid #939598;
-    display: inline-block;
-    position: relative; }
-    .packages .wrapper:before, .packages .wrapper:after {
-      content: "";
-      width: 2px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      background-color: #939598; }
-    .packages .wrapper:before {
-      top: 0; }
-    .packages .wrapper:after {
-      bottom: 0; }
-  .packages .name {
-    font-size: 60px;
-    text-transform: uppercase;
-    color: #fafbff;
-    text-align: left;
-    margin-top: 40px;
-    letter-spacing: 0;
-    font-weight: 600; }
-    .packages .name.option3 {
-      font-size: 37px;
-      line-height: 1; }
-  .packages .price {
-    font-size: 24px;
-    color: #F26522;
-    text-align: left;
-    margin-bottom: 20px; }
-  .packages .info {
-    width: 240px;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #6d6b71;
-    text-align: left;
-    display: block;
-    margin: 30px auto 0; }
-
-@media screen and (min-width: 960px) {
-  .packages .option {
-    width: 33%;
-    float: left;
-    margin-bottom: 0; } }
+.gallery .img-slot {
+  float: left; }
 
 .facilities {
   background-color: #bcbdc0;

@@ -18,7 +18,6 @@ header.main {
   top: 0;
   right: 0;
   padding-top: 20px;
-  height: $header-height;
   z-index: 1;
   transition: .3s ease-in-out;
 
@@ -26,10 +25,10 @@ header.main {
     color: $color-white;
   }
 
-
   &.floating {
     padding-top: 0;
     background-color: $color-white;
+    opacity: 0.95;
 
     a {
       color: $color-grey;
@@ -90,7 +89,7 @@ nav[role=main] {
       line-height: $header-height;
       text-transform: uppercase;
       display: block;
-      font-size: 10px;
+      font-size: 12px;
       position: relative;
       z-index: 1;
       letter-spacing: 1px;
@@ -98,13 +97,105 @@ nav[role=main] {
   }
 }
 
-@media screen and (min-width: $bp-small) {
+@media screen and (max-width: $bp-medium) {
+  // shrink text
   nav[role=main] {
     ul {
       a {
-        font-size: 12px;
+        font-size: 10px;
         letter-spacing: 2px;
+        height: $header-height*0.8;
+        line-height: $header-height*0.8;
       }
+      margin: 0 5px;
+    }
+  }
+}
+
+.packages {
+  overflow: auto;
+  padding: 30px 0;
+
+  .option {
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    box-sizing: border-box;
+    width: 240px;
+    min-height: 240px;
+    padding: 20px 20px 20px 0;
+    border-top: 2px solid #939598;
+    border-right: 2px solid #939598;
+    border-bottom: 2px solid #939598;
+    display: inline-block;
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      width: 2px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      background-color: #939598;
+    }
+
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+  }
+
+  .title {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: left;
+    margin-top: 40px;
+    letter-spacing: 0;
+    font-weight: 600;
+
+    &.option3 {
+      font-size: 37px;
+      line-height: 1;
+    }
+  }
+
+  .price {
+    font-size: 24px;
+    color: $color-orange;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .text{
+    font-size: 24px;
+    color: $color-orange;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    width: 240px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6d6b71;
+    text-align: left;
+    display: block;
+    margin: 30px auto 0;
+  }
+}
+
+@media screen and (min-width: $max-width) {
+  .packages {
+    .option {
+      width: 33%;
+      float: left;
+      margin-bottom: 0;
     }
   }
 }
@@ -282,90 +373,10 @@ nav[role=main] {
 }
 
 
-
-.packages {
-  overflow: auto;
-  padding: 30px 0;
-
-  .option {
-    box-sizing: border-box;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .wrapper {
-    box-sizing: border-box;
-    width: 240px;
-    min-height: 240px;
-    padding: 20px 20px 20px 0;
-    border-top: 2px solid #939598;
-    border-right: 2px solid #939598;
-    border-bottom: 2px solid #939598;
-    display: inline-block;
-    position: relative;
-
-    &:before, &:after {
-      content: "";
-      width: 2px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      background-color: #939598;
-    }
-
-    &:before {
-      top: 0;
-    }
-    &:after {
-      bottom: 0;
-    }
-  }
-
-  .name {
-    font-size: 60px;
-    text-transform: uppercase;
-    color: $color-white;
-    text-align: left;
-    margin-top: 40px;
-    letter-spacing: 0;
-    font-weight: 600;
-
-    &.option3 {
-      font-size: 37px;
-      line-height: 1;
-    }
-  }
-
-  .price {
-    font-size: 24px;
-    color: $color-orange;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  .info {
-    width: 240px;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #6d6b71;
-    text-align: left;
-    display: block;
-    margin: 30px auto 0;
-  }
-}
-
-@media screen and (min-width: $max-width) {
-  .packages {
-    .option {
-      width: 33%;
-      float: left;
-      margin-bottom: 0;
-    }
-  }
-}
-
 .gallery {
-
+.img-slot{
+  float: left;
+}
 }
 
 .facilities {
