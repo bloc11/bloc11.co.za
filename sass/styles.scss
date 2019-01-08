@@ -117,15 +117,39 @@ nav[role=main] {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  background-color: $color-orange;
+  //background-color: $color-orange;
   //background-image: url(/images/pattern-bg.svg);
-  //background-image: url(/img/hero-1-1280x1280x50.jpg);
-  //background-repeat: no-repeat;
-  //background-position: center; 
-  //background-size:cover;
+  background-image: url(/img/hero-1-1280x1280x50.jpg);
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size:cover;
   z-index: 0;
   padding-top: 20vh;
   box-sizing: border-box;
+
+  .bg-img {
+    /* Positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+
+    /* Fill background */
+    min-height: 100%;
+    min-width: 1280px;
+  
+    /* Proportionate scaling */
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1280px) { /* Specific to this particular image */
+    .bg-img {
+      left: 50%;
+      margin-left: -640px;   /* 50% */
+    }
+  }
+ 
 
   .brand {
     max-width: $max-width;
@@ -144,11 +168,6 @@ nav[role=main] {
   .tagline {
     text-transform: uppercase;
     letter-spacing: 4px;
-
-    &.opening {
-      margin-top: 10px;
-      font-size: .9em;
-    }
   }
 }
 
@@ -346,11 +365,7 @@ nav[role=main] {
 }
 
 .gallery {
-  background-image: url(/images/shroom.jpg);
-  background-size: cover;
-  background-position: 50% 50%;
-  width: 100%;
-  height: 80vh;
+
 }
 
 .facilities {

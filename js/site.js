@@ -122,7 +122,7 @@
 
 // Google maps
 (function () {
-  // Must have above : <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAngcWVs020hIadi86aN79U1ibL9qq_c4A"></script>
+  // Must have google api script imported above
   google.maps.event.addDomListener(window, 'load', init);
   function init() {
     var mapOptions = {
