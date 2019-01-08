@@ -629,15 +629,16 @@ input[type=submit] {
   float: right; }
 
 header.main {
-  height: 200px;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
+  padding-top: 20px;
+  height: 50px;
   z-index: 1;
   transition: .3s ease-in-out; }
-#  header.main a {
-#    color: #fafbff; }
+  header.main a {
+    color: #fafbff; }
   header.main.floating {
     padding-top: 0;
     background-color: #fafbff; }
@@ -646,37 +647,20 @@ header.main {
     header.main.floating nav[role=main] ul li:before {
       color: #373734; }
 
-@media screen and (min-width: 380px) {
-header.main {
-    height: 84px;
-}
-}
-
 nav[role=main] {
-  max-width: 1100px;
+  max-width: 960px;
   min-width: 320px;
   margin: 0 auto; }
-
   nav[role=main] ul {
     list-style: none;
     padding: 0;
     margin: 0;
     margin: 0 10%; }
-
     nav[role=main] ul li {
       float: left;
-      width: 28%;
+      width: 25%;
       text-align: center;
       position: relative; }
-
-    @media screen and (min-width: 380px) {
-    nav[role=main] ul li {
-      float: left;
-      width: 14%;
-      text-align: center;
-      position: relative; }
-  }
-
       nav[role=main] ul li:before {
         font-family: 'icons';
         content: "\e904";
@@ -714,7 +698,7 @@ nav[role=main] {
   background-color: #F26522;
   background-image: url(/images/pattern-bg.svg);
   z-index: 0;
-  padding-top: 30vh;
+  padding-top: 20vh;
   box-sizing: border-box; }
   .welcome .brand {
     max-width: 960px;
@@ -840,9 +824,6 @@ nav[role=main] {
     .packages .name.option3 {
       font-size: 37px;
       line-height: 1; }
-    .packages .name.option4 {
-      font-size: 37px;
-      line-height: 1; }
   .packages .price {
     font-size: 24px;
     color: #F26522;
@@ -864,7 +845,7 @@ nav[role=main] {
     margin-bottom: 0; } }
 
 .gallery {
-  background-image: url(/images/wall_img.jpg);
+  background-image: url(/images/shroom.jpg);
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
@@ -926,9 +907,7 @@ nav[role=main] {
     margin: 0 auto;
     text-align: center; }
   .contact .wrapper {
-    margin-top: 50px;
-    text-align: center;
-  }
+    margin-top: 50px; }
   .contact .details {
     box-sizing: border-box;
     width: 80%;
@@ -954,12 +933,6 @@ nav[role=main] {
   .contact a {
     color: #F26522; }
 
-@media screen and (min-width: 960px) {
-  .box-center {
-    margin-left: 40%;
-  }
-}
-
 .location {
   width: 100%;
   height: 60vh;
@@ -976,103 +949,3 @@ nav[role=main] {
     height: 100%; }
     .location #map-overlay.hide {
       display: none; }
-
-.jc-fund {
-  padding: 5px 0;
-  text-align: center;
-  background-color: black;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.jc-fund a:hover {
-  color: black
-}
-
-.jc-fund:hover {
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  font-color: black;
-}
-
-.jc-modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,0.8);
-  z-index: 2;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .4s ease-out;
-}
-
-.jc-modal.show {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-
-.jc-modal .more-info {
-  width: 80vw;
-  height: 90vh;
-  background-color: white;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  overflow: auto;
-  text-align: center;
-}
-
-.jc-modal h1 {
-  border-bottom: 2px solid #ccc;
-  padding: 10px 0 20px;
-  font-size: 1.5rem;
-}
-
-.jc-modal p {
-  display: block;
-  padding: 10px 20px 20px 20px;
-  text-align: left;
-}
-
-.jc-modal a {
-  color: white;
-  background-color: #F26522;
-  border: none;
-  padding: 10px 30px;
-  margin-top: 10px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.jc-image {
-  height: 50vh;
-  background-image: url(/images/juliachen.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: center;
-  background-position-x: center;
-}
-
-#container2 {
-  margin-left: 10%;
-  margin-top: 10%;
-}
-
-.spaced {
-  padding-bottom: 20px;
-}
-
-#reference {
-  width: 30%;
-  padding-bottom: 20px;
-}
-
-#paybutton {
-  width: 30%;
-}
