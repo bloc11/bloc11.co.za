@@ -12,6 +12,22 @@
   line-height: 1.5;
 }
 
+// ---------------------- Contents ---------------------- //
+
+  //  header and navigation
+  //  options system
+  //  welcome
+  //  notice-board
+  //  prices
+  //  gallery
+  //  hours
+  //  about
+  //  contact
+  //  location
+
+
+// ---------------------- header and navigation ---------------------- //
+
 header.main {
   position: fixed;
   left: 0;
@@ -112,9 +128,12 @@ nav[role=main] {
   }
 }
 
+// ---------------------- options system ---------------------- //
+
 .packages {
   overflow: auto;
   padding: 30px 0;
+  overflow-x: hidden;
 
   .option {
     box-sizing: border-box;
@@ -200,9 +219,7 @@ nav[role=main] {
   }
 }
 
-// Sections
-
-// - welcome
+// ---------------------- welcome ---------------------- //
 
 .welcome {
   width: 100%;
@@ -343,12 +360,22 @@ nav[role=main] {
   }
 }
 
-// - prices
+// ---------------------- notice-board ---------------------- //
+.notice-board{
+  background-color: $color-orange;
+  background-image: url(/img/pattern-bg.svg);
+  color: $color-white;
+
+  h2{
+   color: $color-white;
+  }
+}
+
+// ---------------------- prices ---------------------- //
 
 .prices {
   background-color: $color-grey;
   background-image: url(/images/pattern-bg-dark.svg);
-  padding-bottom: 50px;
 
   p {
     margin: 0 30px;
@@ -372,6 +399,7 @@ nav[role=main] {
   }
 }
 
+// ---------------------- gallery ---------------------- //
 
 .gallery {
 .img-slot{
@@ -379,12 +407,29 @@ nav[role=main] {
 }
 }
 
-.facilities {
-  background-color: #bcbdc0;
-  background-image: url(/images/pattern-bg.svg);
-  text-align: center;
-  padding-bottom: 80px;
+// ---------------------- facilities ---------------------- //
 
+.facilities {
+  #gym{
+    background-image: url(/img/gym-1-600x600x50.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  #yoga{
+    background-image: url(/img/yoga-1-600x600x50.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  #physio{
+    background-image: url(/img/psycho-1-600x600x50.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  #coffee{
+    background-image: url(/img/coffee-1-600x600x50.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
   ul {
     list-style: none;
     margin: 0;
@@ -442,9 +487,20 @@ nav[role=main] {
   }
 }
 
+// ---------------------- hours ---------------------- //
+
+.hours{
+  table{
+    margin: 0 auto;
+  }
+  td{
+    padding: 2px 20px;
+  }
+}
+// ---------------------- contact ---------------------- //
+
 .contact {
   background-color: $color-white;
-  padding-bottom: 80px;
 
   h2 {
     color: $color-grey;
@@ -502,6 +558,7 @@ nav[role=main] {
   }
 }
 
+// ---------------------- location ---------------------- //
 
 .location {
   width: 100%;

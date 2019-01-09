@@ -628,6 +628,10 @@ input[type=submit] {
   font-size: 14px;
   float: right; }
 
+section {
+  padding-bottom: 80px;
+  border-bottom: 5px solid #fafbff; }
+
 header.main {
   position: fixed;
   left: 0;
@@ -697,7 +701,8 @@ nav[role=main] {
 
 .packages {
   overflow: auto;
-  padding: 30px 0; }
+  padding: 30px 0;
+  overflow-x: hidden; }
   .packages .option {
     box-sizing: border-box;
     text-align: center;
@@ -856,10 +861,16 @@ nav[role=main] {
     .social ul .icon-instagram {
       font-size: 16px; }
 
+.notice-board {
+  background-color: #F26522;
+  background-image: url(/img/pattern-bg.svg);
+  color: #fafbff; }
+  .notice-board h2 {
+    color: #fafbff; }
+
 .prices {
   background-color: #373734;
-  background-image: url(/images/pattern-bg-dark.svg);
-  padding-bottom: 50px; }
+  background-image: url(/images/pattern-bg-dark.svg); }
   .prices p {
     margin: 0 30px; }
 
@@ -874,36 +885,51 @@ nav[role=main] {
 .gallery .img-slot {
   float: left; }
 
-.facilities {
-  background-color: #bcbdc0;
-  background-image: url(/images/pattern-bg.svg);
-  text-align: center;
-  padding-bottom: 80px; }
-  .facilities ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto; }
-    .facilities ul li {
-      box-sizing: border-box;
-      margin-bottom: 40px;
-      padding: 0 20px;
-      text-align: center;
-      color: #fafbff; }
-    .facilities ul i {
-      color: #fafbff;
-      font-size: 50px;
-      margin-bottom: 20px;
-      display: inline-block; }
-    .facilities ul .label {
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 20px; }
-    .facilities ul .info {
-      font-weight: 300;
-      font-size: 13px;
-      line-height: 1.5; }
+.facilities #gym {
+  background-image: url(/img/gym-1-600x600x50.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.facilities #yoga {
+  background-image: url(/img/yoga-1-600x600x50.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.facilities #physio {
+  background-image: url(/img/psycho-1-600x600x50.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.facilities #coffee {
+  background-image: url(/img/coffee-1-600x600x50.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.facilities ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto; }
+  .facilities ul li {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    text-align: center;
+    color: #fafbff; }
+  .facilities ul i {
+    color: #fafbff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: inline-block; }
+  .facilities ul .label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px; }
+  .facilities ul .info {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5; }
 
 @media screen and (min-width: 600px) {
   .facilities ul li {
@@ -916,9 +942,14 @@ nav[role=main] {
     width: 25%;
     margin-bottom: 0; } }
 
+.hours table {
+  margin: 0 auto; }
+
+.hours td {
+  padding: 2px 20px; }
+
 .contact {
-  background-color: #fafbff;
-  padding-bottom: 80px; }
+  background-color: #fafbff; }
   .contact h2 {
     color: #373734;
     padding-bottom: 20px; }
