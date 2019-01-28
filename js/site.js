@@ -1,5 +1,40 @@
 'use strict';
 
+// Modals
+(function () {
+
+  // add event to each openModal button
+  var openModalBtns = document.getElementsByClassName('modal-open-btn');
+  for (var i = 0; i < openModalBtns.length; ++i) {
+    openModalBtns[i].addEventListener('click', function (e) {
+      // find the modal the button is pointing to and stop hiding the modal
+      var targetId = e.target.getAttribute('target-id');
+      var target = document.getElementById(targetId);
+      target.classList.remove('closed');
+    });
+  }
+
+  // add events to each modal 
+  var modals = document.getElementsByClassName('modal');
+  for (var i = 0; i < modals.length; ++i) {
+    modals[i].addEventListener('click', function (e) {
+      e.target.classList.add('closed');
+    })
+  }
+
+  // add even to close buttons
+  var modalCloseBtns = document.getElementsByClassName('close-btn');
+  for (var i = 0; i < modalCloseBtns.length; ++i) {
+    modalCloseBtns[i].addEventListener('click', function (e) {
+      // will close all modals
+      var modals = document.getElementsByClassName('modal');
+      for (var i = 0; i < modals.length; ++i) {
+        modals[i].classList.add('closed');
+      }
+    })
+  }
+})();
+
 // Nav menu background
 (function () {
   var didScroll = false;

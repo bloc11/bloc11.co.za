@@ -303,7 +303,7 @@ template {
 [hidden] {
   display: none; }
 
-/* Layout */
+/* Layout Grid */
 .container {
   width: 100%;
   margin-left: auto;
@@ -359,6 +359,174 @@ template {
     width: 91.66667%; }
   .col-12 {
     width: 100%; } }
+
+/* Layout Modal */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: rgba(0, 255, 98, 0.678); }
+  .modal .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    margin: 0;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5); }
+    .modal .modal-content .close-btn {
+      position: relative;
+      bottom: 1rem;
+      left: 1rem;
+      margin-left: auto;
+      z-index: 1;
+      border: none;
+      background-color: transparent; }
+    .modal .modal-content .modal-header {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0 0 1.25rem; }
+    .modal .modal-content .modal-body {
+      position: relative;
+      display: flex; }
+    .modal .modal-content .modal-footer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      margin: 0;
+      padding: 1.875rem 0 0; }
+
+.modal.closed {
+  display: none;
+  height: 0vh;
+  z-index: -1000; }
+
+.packages {
+  overflow: auto;
+  padding: 30px 0;
+  overflow-x: hidden; }
+  .packages .option {
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px; }
+  .packages .wrapper {
+    box-sizing: border-box;
+    width: 240px;
+    min-height: 240px;
+    padding: 20px 20px 20px 0;
+    border-top: 2px solid #939598;
+    border-right: 2px solid #939598;
+    border-bottom: 2px solid #939598;
+    display: inline-block;
+    position: relative; }
+    .packages .wrapper:before, .packages .wrapper:after {
+      content: "";
+      width: 2px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      background-color: #939598; }
+    .packages .wrapper:before {
+      top: 0; }
+    .packages .wrapper:after {
+      bottom: 0; }
+  .packages .title {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fafbff;
+    text-align: left;
+    margin-top: 40px;
+    letter-spacing: 0;
+    font-weight: 600; }
+    .packages .title.option3 {
+      font-size: 37px;
+      line-height: 1; }
+  .packages .price {
+    font-size: 24px;
+    color: #F26522;
+    text-align: left;
+    margin-bottom: 20px; }
+  .packages .text {
+    font-size: 24px;
+    color: #F26522;
+    text-align: left;
+    margin-bottom: 20px; }
+  .packages .info {
+    width: 240px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6d6b71;
+    text-align: left;
+    display: block;
+    margin: 30px auto 0; }
+
+a {
+  color: #373734;
+  text-decoration: none; }
+
+body {
+  font-family: "proximanova";
+  letter-spacing: 2px; }
+
+.full-width {
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto; }
+
+input[type=text], input[type=email] {
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  font-size: 15px;
+  width: 70%;
+  margin-bottom: 10px; }
+  input[type=text]:focus, input[type=email]:focus {
+    outline: none; }
+
+label {
+  color: #F26522;
+  margin-left: 10px; }
+
+textarea {
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+  margin: 0; }
+
+input[type=submit] {
+  border: none;
+  background-color: #F26522;
+  color: #fafbff;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 14px;
+  float: right; }
+
+section {
+  padding-bottom: 80px;
+  border-bottom: 5px solid #fafbff; }
 
 /***********
  * Font Paths
@@ -540,56 +708,6 @@ p.center {
 .icon-youtube:before {
   content: "\e90f"; }
 
-a {
-  color: #373734;
-  text-decoration: none; }
-
-body {
-  font-family: "proximanova";
-  letter-spacing: 2px; }
-
-.full-width {
-  max-width: 960px;
-  min-width: 320px;
-  margin: 0 auto; }
-
-input[type=text], input[type=email] {
-  border: 1px solid #e7e7e7;
-  padding: 10px;
-  font-size: 15px;
-  width: 70%;
-  margin-bottom: 10px; }
-  input[type=text]:focus, input[type=email]:focus {
-    outline: none; }
-
-label {
-  color: #F26522;
-  margin-left: 10px; }
-
-textarea {
-  box-sizing: border-box;
-  display: block;
-  border: 1px solid #e7e7e7;
-  padding: 10px;
-  font-size: 15px;
-  width: 100%;
-  margin: 0; }
-
-input[type=submit] {
-  border: none;
-  background-color: #F26522;
-  color: #fafbff;
-  letter-spacing: 2px;
-  padding: 10px 20px;
-  margin-top: 10px;
-  display: inline-block;
-  font-size: 14px;
-  float: right; }
-
-section {
-  padding-bottom: 80px;
-  border-bottom: 5px solid #fafbff; }
-
 header.main {
   position: fixed;
   left: 0;
@@ -657,65 +775,6 @@ nav[role=main] {
       height: 40px;
       line-height: 40px; } }
 
-.packages {
-  overflow: auto;
-  padding: 30px 0;
-  overflow-x: hidden; }
-  .packages .option {
-    box-sizing: border-box;
-    text-align: center;
-    margin-bottom: 50px; }
-  .packages .wrapper {
-    box-sizing: border-box;
-    width: 240px;
-    min-height: 240px;
-    padding: 20px 20px 20px 0;
-    border-top: 2px solid #939598;
-    border-right: 2px solid #939598;
-    border-bottom: 2px solid #939598;
-    display: inline-block;
-    position: relative; }
-    .packages .wrapper:before, .packages .wrapper:after {
-      content: "";
-      width: 2px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      background-color: #939598; }
-    .packages .wrapper:before {
-      top: 0; }
-    .packages .wrapper:after {
-      bottom: 0; }
-  .packages .title {
-    font-size: 60px;
-    text-transform: uppercase;
-    color: #fafbff;
-    text-align: left;
-    margin-top: 40px;
-    letter-spacing: 0;
-    font-weight: 600; }
-    .packages .title.option3 {
-      font-size: 37px;
-      line-height: 1; }
-  .packages .price {
-    font-size: 24px;
-    color: #F26522;
-    text-align: left;
-    margin-bottom: 20px; }
-  .packages .text {
-    font-size: 24px;
-    color: #F26522;
-    text-align: left;
-    margin-bottom: 20px; }
-  .packages .info {
-    width: 240px;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #6d6b71;
-    text-align: left;
-    display: block;
-    margin: 30px auto 0; }
-
 @media screen and (min-width: 960px) {
   .packages .option {
     width: 33%;
@@ -726,7 +785,6 @@ nav[role=main] {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  background-image: url(/img/hero-1-1280x1280x50.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -779,6 +837,17 @@ nav[role=main] {
     padding-top: 80px; }
     .welcome .icon-logo {
       font-size: 200px !important; } }
+
+.welcome {
+  background-image: url(/img/hero/hero-1-1280x1280x60.jpg); }
+
+@media screen and (max-width: 780px) {
+  .welcome {
+    background-image: url(/img/hero/hero-1-720x720x60.jpg); } }
+
+@media screen and (min-width: 1280px) {
+  .welcome {
+    background-image: url(/img/hero/hero-1-2560x1280x60.jpg); } }
 
 .social {
   max-width: 960px;

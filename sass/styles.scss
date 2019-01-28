@@ -1,28 +1,28 @@
+// Sass tools
 @import "bourbon/bourbon";
+// Packages
 @import "normalize";
-@import "layout";
+@import "layout-grid";
+@import "layout-modal";
+@import "panel";
+// Site specific components
+@import "global";
 @import "variables";
 @import "fonts";
 @import "icons";
-@import "global";
-//@import "w3css4";
+// Mixins
+@import "mixins";
 
 
-@mixin text {
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 1.5;
-}
 
-// ---------------------- Contents ---------------------- //
+// ---------------------- Contents (matches page sections ---------------------- //
 
   //  header and navigation
-  //  options system
   //  welcome
   //  notice-board
   //  prices
   //  gallery
-  // facilities
+  //  facilities
   //  hours
   //  about
   //  contact
@@ -131,86 +131,6 @@ nav[role=main] {
   }
 }
 
-// ---------------------- options system ---------------------- //
-
-.packages {
-  overflow: auto;
-  padding: 30px 0;
-  overflow-x: hidden;
-
-  .option {
-    box-sizing: border-box;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .wrapper {
-    box-sizing: border-box;
-    width: 240px;
-    min-height: 240px;
-    padding: 20px 20px 20px 0;
-    border-top: 2px solid #939598;
-    border-right: 2px solid #939598;
-    border-bottom: 2px solid #939598;
-    display: inline-block;
-    position: relative;
-
-    &:before, &:after {
-      content: "";
-      width: 2px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      background-color: #939598;
-    }
-
-    &:before {
-      top: 0;
-    }
-    &:after {
-      bottom: 0;
-    }
-  }
-
-  .title {
-    font-size: 60px;
-    text-transform: uppercase;
-    color: $color-white;
-    text-align: left;
-    margin-top: 40px;
-    letter-spacing: 0;
-    font-weight: 600;
-
-    &.option3 {
-      font-size: 37px;
-      line-height: 1;
-    }
-  }
-
-  .price {
-    font-size: 24px;
-    color: $color-orange;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  .text{
-    font-size: 24px;
-    color: $color-orange;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  .info {
-    width: 240px;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #6d6b71;
-    text-align: left;
-    display: block;
-    margin: 30px auto 0;
-  }
-}
 
 @media screen and (min-width: $max-width) {
   .packages {
@@ -230,7 +150,7 @@ nav[role=main] {
   height: 100vh;
   //background-color: $color-orange;
   //background-image: url(/images/pattern-bg.svg);
-  background-image: url(/img/hero-1-1280x1280x50.jpg);
+  //background-image: url(/img/hero-1-1280x1280x50.jpg);
   background-repeat: no-repeat;
   background-position: center; 
   background-size:cover;
@@ -308,6 +228,25 @@ nav[role=main] {
   }
 }
 
+// set background image by screen size
+// default
+.welcome{
+  background-image: url(/img/hero/hero-1-1280x1280x60.jpg);
+}
+
+// if smaller than
+@media screen and (max-width: 780px){
+  .welcome{
+    background-image: url(/img/hero/hero-1-720x720x60.jpg);
+  }
+}
+
+// if larger than
+@media screen and (min-width: 1280px){
+  .welcome{
+    background-image: url(/img/hero/hero-1-2560x1280x60.jpg);
+  }
+}
 
 .social {
   max-width: $max-width;
