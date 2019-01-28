@@ -20,7 +20,6 @@
   <meta name="keywords" content="bouldering, rock climbing, gym, indoor, fitness, cape town">
 
   <link rel="stylesheet" type="text/css" href="/styles.css" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="shortcut icon" href="/favicon.ico">
 </head>
 
@@ -41,7 +40,7 @@
   </header>
 
   <main>
-    <section class="welcome">
+    <section class="welcome" id="welcome">
       <div class="brand">
         <i class="icon-logo"></i>
         <div class="tagline">Climbing &amp; Fitness</div>
@@ -96,9 +95,9 @@
 
 
 
-    <section class="facilities" id="facilities">
-      <div class="w3-row">
-        <div class="w3-col m6" id="gym">
+    <section class="facilities container" id="facilities">
+      <div class="row">
+        <div class="col-6" id="gym">
           <h3>bouldering gym</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -106,7 +105,7 @@
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
           </p>
         </div>
-        <div class="w3-col m6" id="yoga">
+        <div class="col-6" id="yoga">
           <h3>Yoga and fitness</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -114,7 +113,9 @@
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
           </p>
         </div>
-        <div class="w3-col m6" id="physio">
+      </div>
+      <div class="row">
+        <div class="col-6" id="physio">
           <h3>Onsite physio</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -122,7 +123,7 @@
             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
           </p>
         </div>
-        <div class="w3-col m6" id="coffee">
+        <div class="col-6" id="coffee">
           <h3>Coffee and WIFI</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -226,15 +227,17 @@
 
 
 
-    <section class="gallery">
-      <div class="img-slot" id="img-1">
-        <img src="/img/gallery-1-600x600x50.jpg" alt="person bouldering at bloc11 gym">
-      </div>
-      <div class="img-slot" id="img-2">
-        <img src="/img/gallery-2-600x600x50.jpg" alt="person bouldering at bloc11 gym">
-      </div>
-      <div class="img-slot" id="img-3">
-        <img src="/img/gallery-3-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+    <section class="gallery container">
+      <div class="row">
+        <div class="img-slot" id="img-1">
+          <img src="/img/gallery-1-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+        </div>
+        <div class="img-slot" id="img-2">
+          <img src="/img/gallery-2-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+        </div>
+        <div class="img-slot" id="img-3">
+          <img src="/img/gallery-3-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+        </div>
       </div>
     </section>
 

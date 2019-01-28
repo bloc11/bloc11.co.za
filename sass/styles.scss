@@ -1,9 +1,11 @@
-@import "normalize";
 @import "bourbon/bourbon";
+@import "normalize";
+@import "layout";
 @import "variables";
 @import "fonts";
 @import "icons";
 @import "global";
+//@import "w3css4";
 
 
 @mixin text {
@@ -20,6 +22,7 @@
   //  notice-board
   //  prices
   //  gallery
+  // facilities
   //  hours
   //  about
   //  contact
@@ -410,26 +413,30 @@ nav[role=main] {
 // ---------------------- facilities ---------------------- //
 
 .facilities {
-  #gym{
-    background-image: url(/img/gym-1-600x600x50.jpg);
+  #gym, #yoga, #physio, #coffee {
     background-repeat: no-repeat;
     background-position: center; 
+  }
+
+  #gym{
+    background-image: url(/img/gym-1-600x600x50.jpg);
+    background-color: rgb(0, 255, 0);
   }
   #yoga{
     background-image: url(/img/yoga-1-600x600x50.jpg);
-    background-repeat: no-repeat;
-    background-position: center; 
+    background-color: rgb(0, 4, 255);
   }
   #physio{
     background-image: url(/img/psycho-1-600x600x50.jpg);
-    background-repeat: no-repeat;
-    background-position: center; 
+    background-color: red;
+
   }
   #coffee{
     background-image: url(/img/coffee-1-600x600x50.jpg);
-    background-repeat: no-repeat;
-    background-position: center; 
+    background-color: rgb(238, 255, 0);
+
   }
+
   ul {
     list-style: none;
     margin: 0;
