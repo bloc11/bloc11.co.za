@@ -4,11 +4,11 @@
 (function () {
 
   // add event to each openModal button
-  var openModalBtns = document.getElementsByClassName('modal-open-btn');
+  var openModalBtns = document.getElementsByClassName('js-modal-open-btn');
   for (var i = 0; i < openModalBtns.length; ++i) {
     openModalBtns[i].addEventListener('click', function (e) {
       // find the modal the button is pointing to and stop hiding the modal
-      var targetId = e.target.getAttribute('target-id');
+      var targetId = e.target.getAttribute('target-modal-id');
       var target = document.getElementById(targetId);
       target.classList.remove('closed');
     });
@@ -23,7 +23,7 @@
   }
 
   // add even to close buttons
-  var modalCloseBtns = document.getElementsByClassName('close-btn');
+  var modalCloseBtns = document.getElementsByClassName('js-close-btn');
   for (var i = 0; i < modalCloseBtns.length; ++i) {
     modalCloseBtns[i].addEventListener('click', function (e) {
       // will close all modals

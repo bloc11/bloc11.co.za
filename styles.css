@@ -372,7 +372,7 @@ template {
   height: 100vh;
   overflow: hidden;
   z-index: 1000;
-  background-color: rgba(0, 255, 98, 0.678); }
+  background-color: rgba(0, 0, 0, 0.6); }
   .modal .modal-content {
     position: relative;
     display: flex;
@@ -785,6 +785,7 @@ nav[role=main] {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
+  background-color: #373734;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
