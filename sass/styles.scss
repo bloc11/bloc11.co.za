@@ -157,31 +157,7 @@ nav[role=main] {
   z-index: 0;
   padding-top: 20vh;
   box-sizing: border-box;
-
-  .bg-img {
-    /* Positioning */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -100;
-
-    /* Fill background */
-    min-height: 100%;
-    min-width: 1280px;
-  
-    /* Proportionate scaling */
-    width: 100%;
-    height: auto;
-  }
-
-  @media screen and (max-width: 1280px) { /* Specific to this particular image */
-    .bg-img {
-      left: 50%;
-      margin-left: -640px;   /* 50% */
-    }
-  }
  
-
   .brand {
     max-width: $max-width;
     min-width: $min-width;
@@ -197,8 +173,34 @@ nav[role=main] {
   }
 
   .tagline {
+    margin-top: 4rem;
     text-transform: uppercase;
+    font-size: 3vh;
     letter-spacing: 4px;
+  }
+  .sub-tagline{
+    a{
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+}
+
+// set background image by screen size
+// default
+.welcome{
+  background-image: url(/img/hero/hero-1-1280x1280x60.jpg);
+}
+// if smaller than
+@media screen and (max-width: 780px){
+  .welcome{
+    background-image: url(/img/hero/hero-1-720x1008x60.jpg);
+  }
+}
+// if larger than
+@media screen and (min-width: 1280px){
+  .welcome{
+    background-image: url(/img/hero/hero-1-2560x1280x60.jpg);
   }
 }
 
@@ -225,26 +227,6 @@ nav[role=main] {
     .icon-logo {
       font-size: 200px !important;
     }
-  }
-}
-
-// set background image by screen size
-// default
-.welcome{
-  background-image: url(/img/hero/hero-1-1280x1280x60.jpg);
-}
-
-// if smaller than
-@media screen and (max-width: 780px){
-  .welcome{
-    background-image: url(/img/hero/hero-1-720x720x60.jpg);
-  }
-}
-
-// if larger than
-@media screen and (min-width: 1280px){
-  .welcome{
-    background-image: url(/img/hero/hero-1-2560x1280x60.jpg);
   }
 }
 
