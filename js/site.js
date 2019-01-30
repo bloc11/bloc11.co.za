@@ -35,7 +35,7 @@
   }
 })();
 
-// Nav menu background
+// Nav menu background change on scroll
 (function () {
   var didScroll = false;
 
@@ -86,39 +86,6 @@
       },
       easeInQuad: function easeInQuad(t) {
         return t * t;
-      },
-      easeOutQuad: function easeOutQuad(t) {
-        return t * (2 - t);
-      },
-      easeInOutQuad: function easeInOutQuad(t) {
-        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-      },
-      easeInCubic: function easeInCubic(t) {
-        return t * t * t;
-      },
-      easeOutCubic: function easeOutCubic(t) {
-        return --t * t * t + 1;
-      },
-      easeInOutCubic: function easeInOutCubic(t) {
-        return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-      },
-      easeInQuart: function easeInQuart(t) {
-        return t * t * t * t;
-      },
-      easeOutQuart: function easeOutQuart(t) {
-        return 1 - --t * t * t * t;
-      },
-      easeInOutQuart: function easeInOutQuart(t) {
-        return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t;
-      },
-      easeInQuint: function easeInQuint(t) {
-        return t * t * t * t * t;
-      },
-      easeOutQuint: function easeOutQuint(t) {
-        return 1 + --t * t * t * t * t;
-      },
-      easeInOutQuint: function easeInOutQuint(t) {
-        return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
       }
     };
 
@@ -133,11 +100,17 @@
     var start = body.scrollTop;
     var startTime = Date.now();
 
+    var menuOffset = 100; // num px above target or height to navbar
+
     var documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
     var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
-    var destination = documentHeight - element.offsetTop < windowHeight ? documentHeight - windowHeight : element.offsetTop - 50;
+    var destination = documentHeight - element.offsetTop < windowHeight ? documentHeight - windowHeight : element.offsetTop - menuOffset;
 
     function scroll() {
+      // stop infinite loop if we never get to the destination
+      if (destination < 0)
+        destination = 0;
+
       var now = Date.now();
       var time = Math.min(1, (now - startTime) / duration);
       var timeFunction = easings[easing](time);
@@ -176,5 +149,25 @@
 
   document.getElementById('map-overlay').addEventListener('click', function (e) {
     e.target.classList.add('hide');
+  });
+})();
+
+// Gallery logic
+(function () {
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  var images = document.getElementsByClassName('js-gallery-img');
+  var imgPaths = [
+    '/img/gallery/gallery-2-600x600x50.jpg',
+    '/img/gallery/gallery-2-600x600x50.jpg',
+    '/img/gallery/gallery-3-600x600x50.jpg'
+  ];
+  window.addEventListener("load", function () {
+    setInterval(function () {
+      var newPath = imgPaths[randomInt(0, imgPaths.length)];
+      images[randomInt(0, images.length)].src = newPath;
+    }, 3000);
   });
 })();

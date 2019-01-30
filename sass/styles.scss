@@ -5,6 +5,7 @@
 @import "layout-grid";
 @import "layout-modal";
 @import "panel";
+@import "tooltip";
 // Site specific components
 @import "global";
 @import "variables";
@@ -20,10 +21,10 @@
   //  header and navigation
   //  welcome
   //  notice-board
-  //  prices
-  //  gallery
   //  facilities
+  //  prices
   //  hours
+  //  gallery
   //  about
   //  contact
   //  location
@@ -173,17 +174,17 @@ nav[role=main] {
   }
 
   .tagline {
-    margin-top: 4rem;
+    //margin-top: 4rem;
     text-transform: uppercase;
-    font-size: 3vh;
+    //font-size: 3vh;
     letter-spacing: 4px;
   }
-  .sub-tagline{
-    a{
-      text-transform: uppercase;
-      color: $color-white;
-    }
-  }
+  //.sub-tagline{
+  //  a{
+  //    text-transform: uppercase;
+  //    color: $color-white;
+  //  }
+  //}
 }
 
 // set background image by screen size
@@ -287,77 +288,86 @@ nav[role=main] {
 // ---------------------- notice-board ---------------------- //
 .notice-board{
   background-color: $color-orange;
-  background-image: url(/img/pattern-bg.svg);
+  background-image: url(/img/pattern/pattern-dark.svg);
   color: $color-white;
 
   h2{
-   color: $color-white;
+   color: $color-grey;
+   font-size: 2rem;
   }
 }
-
-// ---------------------- prices ---------------------- //
-
-.prices {
-  background-color: $color-grey;
-  background-image: url(/images/pattern-bg-dark.svg);
-
-  p {
-    margin: 0 30px;
-  }
-}
-
-@media screen and (min-width: $bp-medium) {
-  .prices {
-    p {
-      margin: 0 80px;
-    }
-  }
-}
-
-
-@media screen and (min-width: $max-width) {
-  .prices {
-    p {
-      margin: 0 120px;
-    }
-  }
-}
-
-// ---------------------- gallery ---------------------- //
-
-.gallery {
-.img-slot{
-  float: left;
-}
-}
-
 // ---------------------- facilities ---------------------- //
 
 .facilities {
-  #gym, #yoga, #physio, #coffee {
-    background-repeat: no-repeat;
-    background-position: center; 
+  background-color: $color-grey;
+
+  .half-width{
+    max-width: 480px;
+    min-width: 175px;
+    margin: 0 auto;
   }
 
+  .right{
+    margin-right: 0;
+    padding-right: 10px;
+  }
+  .left{
+    margin-left: 0;
+    padding-left: 10px;
+  }
+
+  // background images by id
+  #gym, #yoga, #physio, #coffee{
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 20rem;
+
+  }
   #gym{
-    background-image: url(/img/gym-1-600x600x50.jpg);
-    background-color: rgb(0, 255, 0);
+    background-image: url(/img/gym/gym-1280.jpg);
   }
   #yoga{
-    background-image: url(/img/yoga-1-600x600x50.jpg);
-    background-color: rgb(0, 4, 255);
+    background-image: url(/img/yoga/yoga-1280.jpg);
   }
   #physio{
-    background-image: url(/img/psycho-1-600x600x50.jpg);
-    background-color: red;
+    background-image: url(/img/physio/physio-1280.jpg);
 
   }
   #coffee{
-    background-image: url(/img/coffee-1-600x600x50.jpg);
-    background-color: rgb(238, 255, 0);
-
+    background-image: url(/img/coffee/coffee-1280.jpg);
   }
 
+  .facility {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $color-white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    min-height: 15em;
+  }
+
+  
+
+  h3{
+    margin-top: 30px;
+    color: $color-orange;
+    font-size: 2rem;
+  }
+
+  button{
+    border: none;
+    background-color: green;
+  }
+
+  i {
+    display: block;
+    color: $color-white;
+    font-size: 50px;
+    margin: 20px auto 30px auto;
+  }
+/*
   ul {
     list-style: none;
     margin: 0;
@@ -390,6 +400,7 @@ nav[role=main] {
       @include text;
     }
   }
+  */
 }
 
 @media screen and (min-width: $bp-medium) {
@@ -415,20 +426,120 @@ nav[role=main] {
   }
 }
 
+// ---------------------- prices ---------------------- //
+
+.prices {
+  background-color: $color-grey;
+  background-image: url(/img/pattern/pattern-dark.svg);
+
+  h2{
+    padding-bottom: 20px;
+  }
+
+  p {
+    margin-bottom:30px;
+  }
+}
+
+@media screen and (min-width: $bp-medium) {
+  .prices {
+    p {
+      margin: 0 80px;
+    }
+  }
+}
+
+
+@media screen and (min-width: $max-width) {
+  .prices {
+    p {
+      margin: 0 120px;
+    }
+  }
+}
+
+
+
 // ---------------------- hours ---------------------- //
 
 .hours{
+  background-color: #bcbdc0;
+  background-image: url(/img/pattern/pattern-dark.svg);
+
+  h2{
+    color: $color-white;
+  }
+
   table{
     margin: 0 auto;
   }
   td{
-    padding: 2px 20px;
+    padding: 2px 10px;
+  }
+  .large td{
+    content: "";
+    height: 1rem;
+  }
+  .day{
+    color: $color-grey;
+  }
+  .time{
+    font-weight: 500;
   }
 }
+
+// ---------------------- gallery ---------------------- //
+
+.gallery {
+  .img-slot{
+    width: 33.3333%;
+    float: left;
+    img{
+      width: 100%;
+    }
+  }
+  padding-bottom: 0px;
+}
+
+// ---------------------- about ---------------------- //
+.about{
+  background-color: #bcbdc0;
+  background-image: url(/img/pattern/pattern-dark.svg);
+  background-position: right;
+  text-align: center;
+
+  h2{
+    color: $color-white;
+
+  }
+
+  img{
+    width: 200px;
+    margin-bottom:30px;
+  }
+  p{
+    padding: 0 15px;
+    color: white;
+  }
+  a{
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    &:hover{
+      color: $color-grey;
+    }
+  }
+  
+}
+
 // ---------------------- contact ---------------------- //
 
 .contact {
   background-color: $color-white;
+  background-image: url(/img/pattern/pattern-light.svg);
+  background-position: right;
+
 
   h2 {
     color: $color-grey;
@@ -453,6 +564,7 @@ nav[role=main] {
     box-sizing: border-box;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
     @include text;
   }
 

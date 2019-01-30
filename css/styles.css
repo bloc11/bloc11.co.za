@@ -419,6 +419,48 @@ template {
   height: 0vh;
   z-index: -1000; }
 
+.panel-group .panel {
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 50px; }
+  .panel-group .panel .panel-content {
+    box-sizing: border-box;
+    width: 240px;
+    min-height: 240px;
+    padding: 20px 20px 20px 0;
+    border-top: 2px solid #939598;
+    border-right: 2px solid #939598;
+    border-bottom: 2px solid #939598; }
+    .panel-group .panel .panel-content:before, .panel-group .panel .panel-content:after {
+      content: "";
+      width: 2px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      background-color: #939598; }
+    .panel-group .panel .panel-content:before {
+      top: 0; }
+    .panel-group .panel .panel-content:after {
+      bottom: 0; }
+    .panel-group .panel .panel-content .panel-title {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #fafbff;
+      text-align: left;
+      margin-top: 40px;
+      letter-spacing: 0;
+      font-weight: 600; }
+    .panel-group .panel .panel-content .panel-text {
+      font-size: 24px;
+      color: #373734;
+      text-align: left;
+      margin-bottom: 20px; }
+
+.panel-group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .packages {
   overflow: auto;
   padding: 30px 0;
@@ -449,7 +491,7 @@ template {
     .packages .wrapper:after {
       bottom: 0; }
   .packages .title {
-    font-size: 60px;
+    font-size: 40px;
     text-transform: uppercase;
     color: #fafbff;
     text-align: left;
@@ -473,10 +515,38 @@ template {
     width: 240px;
     font-size: 12px;
     line-height: 1.5;
-    color: #6d6b71;
+    color: #9e9e9e;
     text-align: left;
     display: block;
     margin: 30px auto 0; }
+
+.tooltip {
+  position: relative;
+  display: inline-block; }
+  .tooltip:hover .tip {
+    visibility: visible; }
+  .tooltip .tip {
+    visibility: hidden;
+    min-width: 120px;
+    width: 200px;
+    background-color: #373734;
+    color: #fafbff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%; }
+    .tooltip .tip:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #373734 transparent transparent; }
 
 a {
   color: #373734;
@@ -803,13 +873,8 @@ nav[role=main] {
     font-size: 25vh;
     margin-bottom: 20px; }
   .welcome .tagline {
-    margin-top: 4rem;
     text-transform: uppercase;
-    font-size: 3vh;
     letter-spacing: 4px; }
-  .welcome .sub-tagline a {
-    text-transform: uppercase;
-    color: #fafbff; }
 
 .welcome {
   background-image: url(/img/hero/hero-1-1280x1280x60.jpg); }
@@ -877,73 +942,91 @@ nav[role=main] {
 
 .notice-board {
   background-color: #F26522;
-  background-image: url(/img/pattern-bg.svg);
+  background-image: url(/img/pattern/pattern-dark.svg);
   color: #fafbff; }
   .notice-board h2 {
-    color: #fafbff; }
+    color: #373734;
+    font-size: 2rem; }
 
-.prices {
+.facilities {
   background-color: #373734;
-  background-image: url(/images/pattern-bg-dark.svg); }
-  .prices p {
-    margin: 0 30px; }
+  /*
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 
-@media screen and (min-width: 600px) {
-  .prices p {
-    margin: 0 80px; } }
+    li {
+      box-sizing: border-box;
+      margin-bottom: 40px;
+      padding: 0 20px;
+      text-align: center;
+      color: $color-white;
+    }
 
-@media screen and (min-width: 960px) {
-  .prices p {
-    margin: 0 120px; } }
+    i {
+      color: $color-white;
+      font-size: 50px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
 
-.gallery .img-slot {
-  float: left; }
+    .label {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-.facilities #gym, .facilities #yoga, .facilities #physio, .facilities #coffee {
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.facilities #gym {
-  background-image: url(/img/gym-1-600x600x50.jpg);
-  background-color: lime; }
-
-.facilities #yoga {
-  background-image: url(/img/yoga-1-600x600x50.jpg);
-  background-color: #0004ff; }
-
-.facilities #physio {
-  background-image: url(/img/psycho-1-600x600x50.jpg);
-  background-color: red; }
-
-.facilities #coffee {
-  background-image: url(/img/coffee-1-600x600x50.jpg);
-  background-color: #eeff00; }
-
-.facilities ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: auto; }
-  .facilities ul li {
-    box-sizing: border-box;
-    margin-bottom: 40px;
-    padding: 0 20px;
+    .info {
+      @include text;
+    }
+  }
+  */ }
+  .facilities .half-width {
+    max-width: 480px;
+    min-width: 175px;
+    margin: 0 auto; }
+  .facilities .right {
+    margin-right: 0;
+    padding-right: 10px; }
+  .facilities .left {
+    margin-left: 0;
+    padding-left: 10px; }
+  .facilities #gym, .facilities #yoga, .facilities #physio, .facilities #coffee {
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 20rem; }
+  .facilities #gym {
+    background-image: url(/img/gym/gym-1280.jpg); }
+  .facilities #yoga {
+    background-image: url(/img/yoga/yoga-1280.jpg); }
+  .facilities #physio {
+    background-image: url(/img/physio/physio-1280.jpg); }
+  .facilities #coffee {
+    background-image: url(/img/coffee/coffee-1280.jpg); }
+  .facilities .facility {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fafbff;
     text-align: center;
-    color: #fafbff; }
-  .facilities ul i {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    min-height: 15em; }
+  .facilities h3 {
+    margin-top: 30px;
+    color: #F26522;
+    font-size: 2rem; }
+  .facilities button {
+    border: none;
+    background-color: green; }
+  .facilities i {
+    display: block;
     color: #fafbff;
     font-size: 50px;
-    margin-bottom: 20px;
-    display: inline-block; }
-  .facilities ul .label {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 20px; }
-  .facilities ul .info {
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 1.5; }
+    margin: 20px auto 30px auto; }
 
 @media screen and (min-width: 600px) {
   .facilities ul li {
@@ -956,14 +1039,72 @@ nav[role=main] {
     width: 25%;
     margin-bottom: 0; } }
 
-.hours table {
-  margin: 0 auto; }
+.prices {
+  background-color: #373734;
+  background-image: url(/img/pattern/pattern-dark.svg); }
+  .prices h2 {
+    padding-bottom: 20px; }
+  .prices p {
+    margin-bottom: 30px; }
 
-.hours td {
-  padding: 2px 20px; }
+@media screen and (min-width: 600px) {
+  .prices p {
+    margin: 0 80px; } }
+
+@media screen and (min-width: 960px) {
+  .prices p {
+    margin: 0 120px; } }
+
+.hours {
+  background-color: #bcbdc0;
+  background-image: url(/img/pattern/pattern-dark.svg); }
+  .hours h2 {
+    color: #fafbff; }
+  .hours table {
+    margin: 0 auto; }
+  .hours td {
+    padding: 2px 10px; }
+  .hours .large td {
+    content: "";
+    height: 1rem; }
+  .hours .day {
+    color: #373734; }
+  .hours .time {
+    font-weight: 500; }
+
+.gallery {
+  padding-bottom: 0px; }
+  .gallery .img-slot {
+    width: 33.3333%;
+    float: left; }
+    .gallery .img-slot img {
+      width: 100%; }
+
+.about {
+  background-color: #bcbdc0;
+  background-image: url(/img/pattern/pattern-dark.svg);
+  background-position: right;
+  text-align: center; }
+  .about h2 {
+    color: #fafbff; }
+  .about img {
+    width: 200px;
+    margin-bottom: 30px; }
+  .about p {
+    padding: 0 15px;
+    color: white; }
+  .about a {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700; }
+    .about a:hover {
+      color: #373734; }
 
 .contact {
-  background-color: #fafbff; }
+  background-color: #fafbff;
+  background-image: url(/img/pattern/pattern-light.svg);
+  background-position: right; }
   .contact h2 {
     color: #373734;
     padding-bottom: 20px; }
@@ -980,6 +1121,7 @@ nav[role=main] {
     box-sizing: border-box;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.5; }

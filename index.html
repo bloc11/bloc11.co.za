@@ -3,13 +3,10 @@
 
 <!--
   TODO
-  * mobile menu icon for navbar
   * notice board
   * facilities
-  * style time table
   * prices
-  * gallery (dynamic)
-  * about
+  * gallery (more)
 -->
 
 <head>
@@ -27,24 +24,24 @@
   <header class="main" id="header">
     <nav role="main">
       <ul>
-        <li><a href="#notice-board" class="js-btn">Home</a></li>
+        <li><a href="#top" class="js-btn">Home</a></li>
+        <li><a href="#notice-board" class="js-btn">Features</a></li>
         <li><a href="#facilities" class="js-btn">Facilities</a></li>
         <li><a href="#hours" class="js-btn">Hours</a></li>
         <li><a href="#prices" class="js-btn">Prices</a></li>
-        <li><a href="#about" class="js-btn">About us</a></li>
+        <li><a href="#gallery" class="js-btn">About</a></li>
         <li><a href="#contact" class="js-btn">Contact</a></li>
-        <li><a href="#location" class="js-btn">Location</a></li>
         <li><a href="https://vertigogear.co.za/">Shop</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="welcome">
+    <section class="welcome" id="top">
       <div class="brand">
         <i class="icon-logo"></i>
         <div class="tagline">Climbing &amp; Fitness</div>
-        <div class="sub-tagline"><a href="#free-course">Free courses for beginners</a></div>
+        <!-- <div class="sub-tagline"><a href="#free-course">Free courses for beginners</a></div> -->
       </div>
       <div class="social">
         <ul>
@@ -57,82 +54,160 @@
 
 
     <section class="notice-board" id="notice-board">
-      <h2>Notice board</h2>
-      <div class="packages full-width">
+      <!-- <h2>Notice board</h2> -->
+      <div class="full-width">
+        <div class="panel-group">
 
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Free beginner class</div>
-            <div class="text">10am every Saturday</div>
+          <div class="panel">
+            <div class="panel-content">
+              <div class="panel-title">All welcome</div>
+              <div class="panel-text">Climbing is for everyone! Whether you are a new climber look to learn the basics, or a seasoned veteran with years of climbing under your belt come experience our world class bouldering gym</div>
+            </div>
           </div>
-        </div>
 
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Free beginner class</div>
-            <div class="text">10am every Saturday</div>
+          <div class="panel">
+            <div class="panel-content">
+              <div class="panel-title">Free beginner class</div>
+              <div class="panel-text">10am every Saturday</div>
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Free beginner class</div>
-            <div class="text">10am every Saturday</div>
+          <div class="panel">
+            <div class="panel-content">
+              <div class="panel-title">Free friend Friday</div>
+              <div class="panel-text">Members can bring a friend for Fridays. All equipment you might need is available to rent</div>
+            </div>
           </div>
-        </div>
 
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Free beginner class</div>
-            <div class="text">10am every Saturday</div>
+          <div class="panel">
+            <div class="panel-content">
+              <div class="panel-title">Beerblocs Fridays</div>
+              <div class="panel-text">Every second Friday, send a specially set problem to claim your free beer</div>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
 
     </section>
 
 
+    <section class="facilities" id="facilities">
 
-    <section class="facilities container" id="facilities">
       <div class="row">
-        <div class="col-6" id="gym">
-          <h3>bouldering gym</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          </p>
+        <div class="col-6">
+          <div id="gym">
+            <div class="half-width right">
+              <div class="facility">
+                <h3>bouldering gym</h3>
+                <i class="icon-mountain"></i>
+                <p>
+                  World class bouldering gym by climbers for climbers
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-6" id="yoga">
-          <h3>Yoga and fitness</h3>
-          <button class="js-modal-open-btn" target-modal-id="yoga-modal">open</button>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          </p>
+        <div class="col-6">
+          <div id="yoga">
+            <div class="half-width left">
+              <div class="facility">
+                <h3>Yoga and fitness</h3>
+                <i class="icon-yoga"></i>
+                <p>
+                  Dedicated yoga lessons
+                </p>
+                <button class="js-modal-open-btn" target-modal-id="yoga-modal">Yoga information and time table</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-6" id="physio">
-          <h3>Onsite physio</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          </p>
+        <div class="col-6">
+          <div id="physio">
+            <div class="half-width right">
+              <div class="facility">
+                <h3>Onsite physio</h3>
+                <i class="icon-physio"></i>
+                <p>
+                  For those less fortunate we have a fully qualified physiotherapist on premises.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-6" id="coffee">
-          <h3>Coffee and WIFI</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          </p>
+        <div class="col-6">
+          <div id="coffee">
+            <div class="half-width left">
+              <div class="facility">
+                <h3>Coffee, snacks and WIFI</h3>
+                <i class="icon-coffee"></i>
+                <p>
+                  Refresh yourself
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </section>
+
+    <!-- <section class="facilities" id="facilities">
+      <div class="full-width">
+        <div class="row">
+          <div class="col-6">
+              <div class="facility">
+                <h3>bouldering gym</h3>
+                <i class="icon-mountain"></i>
+                <p>
+                  World class bouldering gym by climbers for climbers
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div id="yoga">
+              <div class="facility">
+                <h3>Yoga and fitness</h3>
+                <i class="icon-yoga"></i>
+                <p>
+                  Dedicated yoga lessons
+                </p>
+                <button class="js-modal-open-btn" target-modal-id="yoga-modal">Yoga information and time table</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div id="physio">
+              <div class="facility">
+                <h3>Onsite physio</h3>
+                <i class="icon-physio"></i>
+                <p>
+                  For those less fortunate we have a fully qualified physiotherapist on premises.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div id="coffee">
+              <div class="facility">
+                <h3>Coffee, snacks and WIFI</h3>
+                <i class="icon-coffee"></i>
+                <p>
+                  Refresh yourself
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
 
 
@@ -142,36 +217,42 @@
         <table>
           <tbody>
             <tr>
-              <td>Monday</td>
-              <td>10am - 10pm</td>
+              <td class="day">Monday</td>
+              <td class="time">10am - 10pm</td>
             </tr>
             <tr>
-              <td>Tuesday</td>
-              <td>10am - 10pm</td>
+              <td class="day">Tuesday</td>
+              <td class="time">10am - 10pm</td>
             </tr>
             <tr>
-              <td>Wednesday</td>
-              <td>10am - 10pm</td>
+              <td class="day tooltip">Wednesday<span class="tip">Student night</span></td>
+              <td class="time">10am - 10pm</td>
             </tr>
             <tr>
-              <td>Thursday</td>
-              <td>10am - 10pm</td>
+              <td class="day">Thursday</td>
+              <td class="time">10am - 10pm</td>
             </tr>
             <tr>
-              <td>Friday</td>
-              <td>Noon - 7pm</td>
+              <td class="day tooltip">Friday<span class="tip">Free friend Fridays</span></td>
+              <td class="time">Noon - 7pm</td>
+            </tr>
+            <tr class="large">
+              <td></td>
+            </tr>
+            <tr class="time">
+              <td class="day tooltip">Saturday<span class="tip">Beginners course</span></td>
+              <td class="time">9am - 7pm</td>
             </tr>
             <tr>
-              <td>Saterday</td>
-              <td>9am - 7pm</td>
+              <td class="day">Sunday</td>
+              <td class="time">9am - 7pm</td>
+            </tr>
+            <tr class="large">
+              <td></td>
             </tr>
             <tr>
-              <td>Sunday</td>
-              <td>9am - 7pm</td>
-            </tr>
-            <tr>
-              <td>Public holidays</td>
-              <td>9am - 7pm</td>
+              <td class="day">Public holidays</td>
+              <td class="time">9am - 7pm</td>
             </tr>
           </tbody>
         </table>
@@ -206,7 +287,8 @@
             <div class="price">R100</div>
           </div>
           <div class="info">
-            Come at any time and stay as long as you want, includes yoga an pilates,
+            Come at any time and stay as long as you want, includes yoga and pilates.
+            <br>
             R70 if you enter before 4pm on Weekdays.
           </div>
         </div>
@@ -217,7 +299,8 @@
             <div class="price">R395/month</div>
           </div>
           <div class="info">
-            R450 pay as you go. Subscription charged on your bank card.
+            Subscription automatically charged on your bank card monthly or R450 pay as you go.<br>
+            R295 if you enter before 4pm on Weekdays.
           </div>
         </div>
 
@@ -227,16 +310,16 @@
 
 
 
-    <section class="gallery container">
+    <section class="gallery container" id="gallery">
       <div class="row">
         <div class="img-slot" id="img-1">
-          <img src="/img/gallery-1-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+          <img class="js-gallery-img" src="/img/gallery/gallery-1-600x600x50.jpg" alt="person bouldering at bloc11 gym">
         </div>
         <div class="img-slot" id="img-2">
-          <img src="/img/gallery-2-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+          <img class="js-gallery-img" src="/img/gallery/gallery-1-600x600x50.jpg" alt="person bouldering at bloc11 gym">
         </div>
         <div class="img-slot" id="img-3">
-          <img src="/img/gallery-3-600x600x50.jpg" alt="person bouldering at bloc11 gym">
+          <img class="js-gallery-img" src="/img/gallery/gallery-1-600x600x50.jpg" alt="person bouldering at bloc11 gym">
         </div>
       </div>
     </section>
@@ -245,29 +328,41 @@
 
     <section class="about" id="about">
       <h2>About us</h2>
-      <div class="packages full-width">
+      <div class="full-width">
+        <div class="row">
+          <div class="col-4">
+            <div class="">
+              <a href="#top">
+                <img src="img/brands/bloc-logo-light-300.png" alt="Bloc11 logo">
+              </a>
+              <p>
+                Climbing is for everyone! Whether you are a new climber look to learn the basics,
+                or a seasoned veteran with years of climbing under your belt come experience our world class bouldering gym
+              </p>
+            </div>
+          </div>
+          <div class="col-4">
+            <a href="https://www.dreamhigher.co.za/">
+              <img src="img/brands/dream-higher-light-300.png" alt="Dream Higher logo">
+            </a>
+            <p>
+              An outreach initiative for the vulnerable youth of Cape Town, building confidence and
+              bridging social divides through rock climbing
+            </p>
+            <a href="https://www.dreamhigher.co.za/">Find out more...</a>
+          </div>
+          <div class="col-4">
+            <a href="http://bebolder.co.za/">
 
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Bloc11</div>
-            <div class="price">10am every Saturday</div>
+              <img src="img/brands/be-boulder-light-300.png" alt="Be Boulder logo">
+            </a>
+            <p>
+              Be Bolder aims to bring meaningful and carefully curated outdoor content to the forefront. We hope to release compelling stories of people doing amazing things in wonderful places.
+              Through our storytelling we can assist brands to merge captivating content with their outdoor products.
+            </p>
+            <a href="http://bebolder.co.za/">Find out more...</a>
           </div>
         </div>
-
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Dream higher</div>
-            <div class="price">R100</div>
-          </div>
-        </div>
-
-        <div class="option">
-          <div class="wrapper">
-            <div class="title">Be boulder</div>
-            <div class="price">R395/month</div>
-          </div>
-        </div>
-
       </div>
     </section>
 
