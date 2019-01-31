@@ -160,9 +160,15 @@
 
   var images = document.getElementsByClassName('js-gallery-img');
   var imgPaths = [
-    '/img/gallery/gallery-2-600x600x50.jpg',
-    '/img/gallery/gallery-2-600x600x50.jpg',
-    '/img/gallery/gallery-3-600x600x50.jpg'
+    '/img/gallery/gallery-1-600x600.jpg',
+    '/img/gallery/gallery-2-600x600.jpg',
+    '/img/gallery/gallery-3-600x600.jpg',
+    '/img/gallery/gallery-4-600x600.jpg',
+    '/img/gallery/gallery-5-600x600.jpg',
+    '/img/gallery/gallery-6-600x600.jpg',
+    '/img/gallery/gallery-7-600x600.jpg',
+    '/img/gallery/gallery-8-600x600.jpg',
+    '/img/gallery/gallery-9-600x600.jpg'
   ];
   window.addEventListener("load", function () {
     setInterval(function () {

@@ -379,7 +379,7 @@ template {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 50%;
+    width: 80%;
     margin: 0;
     padding: 2.5rem;
     background-color: white;
@@ -404,7 +404,7 @@ template {
       padding: 0 0 1.25rem; }
     .modal .modal-content .modal-body {
       position: relative;
-      display: flex; }
+      display: block; }
     .modal .modal-content .modal-footer {
       position: relative;
       display: flex;
@@ -1032,8 +1032,8 @@ nav[role=main] {
   .facilities #gym, .facilities #yoga, .facilities #physio, .facilities #coffee {
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 90px;
+    padding-bottom: 90px;
     min-height: 20rem; }
   .facilities #gym {
     background-image: url(/img/gym/gym-1280.jpg); }
@@ -1055,8 +1055,12 @@ nav[role=main] {
     color: #F26522;
     font-size: 2rem; }
   .facilities button {
+    margin-top: 2rem;
     border: none;
-    background-color: green; }
+    background-color: transparent;
+    color: #F26522; }
+    .facilities button:hover {
+      color: #fafbff; }
   .facilities i {
     display: block;
     color: #fafbff;

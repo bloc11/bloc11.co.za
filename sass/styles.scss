@@ -406,6 +406,8 @@ nav[role=main] {
 
 .facilities {
   background-color: $color-grey;
+  
+
 
   .half-width{
     max-width: 480px;
@@ -426,8 +428,8 @@ nav[role=main] {
   #gym, #yoga, #physio, #coffee{
     background-repeat: no-repeat;
     background-position: center; 
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 90px;
+    padding-bottom: 90px;
     min-height: 20rem;
 
   }
@@ -463,8 +465,13 @@ nav[role=main] {
   }
 
   button{
+    margin-top: 2rem;
     border: none;
-    background-color: green;
+    background-color: transparent;
+    color: $color-orange;
+    &:hover{
+      color: $color-white;
+    }
   }
 
   i {
