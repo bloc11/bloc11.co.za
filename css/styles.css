@@ -419,48 +419,6 @@ template {
   height: 0vh;
   z-index: -1000; }
 
-.panel-group .panel {
-  float: left;
-  box-sizing: border-box;
-  margin-bottom: 50px; }
-  .panel-group .panel .panel-content {
-    box-sizing: border-box;
-    width: 240px;
-    min-height: 240px;
-    padding: 20px 20px 20px 0;
-    border-top: 2px solid #939598;
-    border-right: 2px solid #939598;
-    border-bottom: 2px solid #939598; }
-    .panel-group .panel .panel-content:before, .panel-group .panel .panel-content:after {
-      content: "";
-      width: 2px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      background-color: #939598; }
-    .panel-group .panel .panel-content:before {
-      top: 0; }
-    .panel-group .panel .panel-content:after {
-      bottom: 0; }
-    .panel-group .panel .panel-content .panel-title {
-      font-size: 3rem;
-      text-transform: uppercase;
-      color: #fafbff;
-      text-align: left;
-      margin-top: 40px;
-      letter-spacing: 0;
-      font-weight: 600; }
-    .panel-group .panel .panel-content .panel-text {
-      font-size: 24px;
-      color: #373734;
-      text-align: left;
-      margin-bottom: 20px; }
-
-.panel-group:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 .packages {
   overflow: auto;
   padding: 30px 0;
@@ -852,6 +810,7 @@ nav[role=main] {
     margin-bottom: 0; } }
 
 .welcome {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   height: 100vh;
@@ -940,13 +899,89 @@ nav[role=main] {
     .social ul .icon-instagram {
       font-size: 16px; }
 
+.link-banner {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 100%; }
+  .link-banner a {
+    display: block;
+    padding: 5px 0;
+    width: 100%;
+    color: white; }
+  .link-banner:hover {
+    background-color: white; }
+    .link-banner:hover a {
+      color: black; }
+
 .notice-board {
   background-color: #F26522;
   background-image: url(/img/pattern/pattern-dark.svg);
   color: #fafbff; }
-  .notice-board h2 {
-    color: #373734;
-    font-size: 2rem; }
+  .notice-board .message {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    text-align: center; }
+    .notice-board .message h3 {
+      color: #fafbff;
+      font-size: 3rem;
+      font-weight: 600; }
+    .notice-board .message p {
+      color: black;
+      font-size: 1rem;
+      font-weight: 400; }
+  .notice-board .promotion {
+    margin: 60px 20px;
+    position: relative;
+    padding: 20px 40px 20px 10px;
+    min-height: 10rem;
+    border-top: 2px solid #c2501b6b;
+    border-right: 2px solid #c2501b6b;
+    border-bottom: 2px solid #c2501b6b; }
+    .notice-board .promotion .title {
+      color: #fafbff;
+      font-size: 2rem;
+      font-weight: 600; }
+    .notice-board .promotion .text {
+      color: black;
+      font-size: 1rem;
+      font-weight: 500; }
+    .notice-board .promotion .info {
+      margin-top: 10px;
+      color: black;
+      font-size: 0.8rem; }
+    .notice-board .promotion:before, .notice-board .promotion:after {
+      content: "";
+      width: 2px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      background-color: #c2501b6b; }
+    .notice-board .promotion:before {
+      top: 0; }
+    .notice-board .promotion:after {
+      bottom: 0; }
+  .notice-board .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #373734;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3); }
+    .notice-board .video-container iframe {
+      z-index: 100;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute; }
 
 .facilities {
   background-color: #373734;
