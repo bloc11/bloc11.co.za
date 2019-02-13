@@ -1,0 +1,137 @@
+// ---------------------- facilities ---------------------- //
+
+.facilities {
+    background-color: $color-grey;
+    
+  
+  
+    .half-width{
+      max-width: 480px;
+      min-width: 175px;
+      margin: 0 auto;
+    }
+  
+    .right{
+      margin-right: 0;
+      padding-right: 10px;
+    }
+    .left{
+      margin-left: 0;
+      padding-left: 10px;
+    }
+  
+    // background images by id
+    #gym, #yoga, #physio, #coffee{
+      background-repeat: no-repeat;
+      background-position: center; 
+      padding-top: 90px;
+      padding-bottom: 90px;
+      min-height: 20rem;
+  
+    }
+    #gym{
+      background-image: url(/img/gym/gym-1280.jpg);
+    }
+    #yoga{
+      background-image: url(/img/yoga/yoga-1280.jpg);
+    }
+    #physio{
+      background-image: url(/img/physio/physio-1280.jpg);
+  
+    }
+    #coffee{
+      background-image: url(/img/coffee/coffee-1280.jpg);
+    }
+  
+    .facility {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: $color-white;
+      text-align: center;
+      padding-top: 1rem;
+      padding-bottom: 3rem;
+      min-height: 15em;
+    }
+  
+    
+  
+    h3{
+      margin-top: 30px;
+      color: $color-orange;
+      font-size: 2rem;
+    }
+  
+    button{
+      margin-top: 2rem;
+      border: none;
+      background-color: transparent;
+      color: $color-orange;
+      &:hover{
+        color: $color-white;
+      }
+    }
+  
+    i {
+      display: block;
+      color: $color-white;
+      font-size: 50px;
+      margin: 20px auto 30px auto;
+    }
+  /*
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+  
+      li {
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        padding: 0 20px;
+        text-align: center;
+        color: $color-white;
+      }
+  
+      i {
+        color: $color-white;
+        font-size: 50px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+  
+      .label {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      .info {
+        @include text;
+      }
+    }
+    */
+  }
+  
+  @media screen and (min-width: $bp-medium) {
+    .facilities {
+      ul {
+        li {
+          float: left;
+          width: 50%;
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: $max-width) {
+    .facilities {
+      ul {
+        li {
+          float: left;
+          width: 25%;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  

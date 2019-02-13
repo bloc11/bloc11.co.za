@@ -742,7 +742,7 @@ header.main {
   top: 0;
   right: 0;
   padding-top: 20px;
-  z-index: 1;
+  z-index: 100;
   transition: .3s ease-in-out; }
   header.main a {
     color: #fafbff; }
@@ -970,6 +970,7 @@ nav[role=main] {
     position: relative;
     padding-bottom: 56.25%;
     overflow: hidden;
+    z-index: 1;
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: #373734;
@@ -977,7 +978,7 @@ nav[role=main] {
     -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3); }
     .notice-board .video-container iframe {
-      z-index: 100;
+      z-index: 2;
       left: 0;
       top: 0;
       height: 100%;
@@ -987,39 +988,39 @@ nav[role=main] {
 .facilities {
   background-color: #373734;
   /*
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-
-    li {
-      box-sizing: border-box;
-      margin-bottom: 40px;
-      padding: 0 20px;
-      text-align: center;
-      color: $color-white;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+  
+      li {
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        padding: 0 20px;
+        text-align: center;
+        color: $color-white;
+      }
+  
+      i {
+        color: $color-white;
+        font-size: 50px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+  
+      .label {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      .info {
+        @include text;
+      }
     }
-
-    i {
-      color: $color-white;
-      font-size: 50px;
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-
-    .label {
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .info {
-      @include text;
-    }
-  }
-  */ }
+    */ }
   .facilities .half-width {
     max-width: 480px;
     min-width: 175px;
@@ -1079,22 +1080,6 @@ nav[role=main] {
     width: 25%;
     margin-bottom: 0; } }
 
-.prices {
-  background-color: #373734;
-  background-image: url(/img/pattern/pattern-dark.svg); }
-  .prices h2 {
-    padding-bottom: 20px; }
-  .prices p {
-    margin-bottom: 30px; }
-
-@media screen and (min-width: 600px) {
-  .prices p {
-    margin: 0 80px; } }
-
-@media screen and (min-width: 960px) {
-  .prices p {
-    margin: 0 120px; } }
-
 .hours {
   background-color: #bcbdc0;
   background-image: url(/img/pattern/pattern-dark.svg); }
@@ -1111,6 +1096,22 @@ nav[role=main] {
     color: #373734; }
   .hours .time {
     font-weight: 500; }
+
+.prices {
+  background-color: #373734;
+  background-image: url(/img/pattern/pattern-dark.svg); }
+  .prices h2 {
+    padding-bottom: 20px; }
+  .prices p {
+    margin-bottom: 30px; }
+
+@media screen and (min-width: 600px) {
+  .prices p {
+    margin: 0 80px; } }
+
+@media screen and (min-width: 960px) {
+  .prices p {
+    margin: 0 120px; } }
 
 .gallery {
   padding-bottom: 0px; }

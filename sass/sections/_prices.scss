@@ -1,0 +1,31 @@
+// ---------------------- prices ---------------------- //
+
+.prices {
+    background-color: $color-grey;
+    background-image: url(/img/pattern/pattern-dark.svg);
+  
+    h2{
+      padding-bottom: 20px;
+    }
+  
+    p {
+      margin-bottom:30px;
+    }
+  }
+  
+  @media screen and (min-width: $bp-medium) {
+    .prices {
+      p {
+        margin: 0 80px;
+      }
+    }
+  }
+  
+  
+  @media screen and (min-width: $max-width) {
+    .prices {
+      p {
+        margin: 0 120px;
+      }
+    }
+  }

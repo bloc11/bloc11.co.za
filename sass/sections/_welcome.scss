@@ -1,0 +1,142 @@
+// ---------------------- welcome ---------------------- //
+
+.welcome {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: $color-grey;
+    //background-image: url(/images/pattern-bg.svg);
+    //background-image: url(/img/hero-1-1280x1280x50.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size:cover;
+    z-index: 0;
+    padding-top: 20vh;
+    box-sizing: border-box;
+   
+    .brand {
+      max-width: $max-width;
+      min-width: $min-width;
+      margin: 0 auto;
+      text-align: center;
+      color: $color-white;
+    }
+  
+    .icon-logo {
+      display: block;
+      font-size: 25vh;
+      margin-bottom: 20px;
+    }
+  
+    .tagline {
+      //margin-top: 4rem;
+      text-transform: uppercase;
+      //font-size: 3vh;
+      letter-spacing: 4px;
+    }
+    //.sub-tagline{
+    //  a{
+    //    text-transform: uppercase;
+    //    color: $color-white;
+    //  }
+    //}
+  }
+  
+  // set background image by screen size
+  // default
+  .welcome{
+    background-image: url(/img/hero/hero-1-1280x1280x60.jpg);
+  }
+  // if smaller than
+  @media screen and (max-width: 780px){
+    .welcome{
+      background-image: url(/img/hero/hero-1-720x1008x60.jpg);
+    }
+  }
+  // if larger than
+  @media screen and (min-width: 1280px){
+    .welcome{
+      background-image: url(/img/hero/hero-1-2560x1280x60.jpg);
+    }
+  }
+  
+  @media screen and (min-width: $bp-small) {
+    .welcome {
+      .icon-logo {
+        font-size: 30vh;
+      }
+    }
+  }
+  
+  @media screen and (min-width: $bp-medium) {
+    .welcome {
+      .icon-logo {
+        font-size: 40vh;
+      }
+    }
+  }
+  
+  @media screen and (max-height: 420px) {
+    .welcome {
+      padding-top: 80px;
+  
+      .icon-logo {
+        font-size: 200px !important;
+      }
+    }
+  }
+  
+  .social {
+    max-width: $max-width;
+    min-width: $min-width;
+    margin: 16vh auto 0;
+    text-align: center;
+  
+    ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  
+      &:before, &:after {
+        content: "";
+        height: 2px;
+        position: absolute;
+        left: -70px;
+        width: 80px;
+        background-color: white;
+        top: 18.5px;
+      }
+  
+      &:after {
+        left: initial;
+        right: -70px;
+      }
+  
+      li {
+        float: left;
+        border: 2px solid $color-white;
+        border-radius: 38px;
+        height: 38px;
+        margin: 0 10px;
+      }
+  
+      a {
+        color: $color-white;
+        font-size: 18px;
+        padding: 10px;
+        line-height: 38px;
+  
+        &:before {
+          left: 1px;
+          position: relative;
+        }
+      }
+  
+      .icon-instagram {
+        font-size: 16px
+      }
+    }
+  }
