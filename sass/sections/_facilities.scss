@@ -2,6 +2,7 @@
 
 .facilities {
     background-color: $color-grey;
+    padding-bottom: 0px;
     
   
   
@@ -12,11 +13,15 @@
     }
   
     .right{
-      margin-right: 0;
+      margin-right: 10px;
+      margin-left: 10px;
       padding-right: 10px;
+      padding-left: 10px;
     }
     .left{
-      margin-left: 0;
+      margin-right: 10px;
+      margin-left: 10px;
+      padding-right: 10px;
       padding-left: 10px;
     }
   
@@ -24,6 +29,7 @@
     #gym, #yoga, #physio, #coffee{
       background-repeat: no-repeat;
       background-position: center; 
+      background-size: cover;
       padding-top: 90px;
       padding-bottom: 90px;
       min-height: 20rem;
@@ -47,8 +53,7 @@
       background-color: rgba(0, 0, 0, 0.8);
       color: $color-white;
       text-align: center;
-      padding-top: 1rem;
-      padding-bottom: 3rem;
+      padding:1rem 1rem 3rem 1rem;
       min-height: 15em;
     }
   
@@ -110,28 +115,50 @@
       }
     }
     */
-  }
-  
-  @media screen and (min-width: $bp-medium) {
-    .facilities {
-      ul {
-        li {
-          float: left;
-          width: 50%;
-        }
+}
+
+// medium and up
+// @media screen and (min-width: $bp-medium) {
+//   .facilities {
+//     border: 3px solid red;
+//     ul {
+//       li {
+//         float: left;
+//         width: 50%;
+//       }
+//     }
+//     .right{
+//       margin-right: 0px;
+//       padding-right: 10px;
+//     }
+//     .left{
+//       margin-left: 0px;
+//       padding-left: 10px;
+//     }
+//   }
+// }
+
+// large screens
+@media screen and (min-width: $bp-medium) {
+  .facilities {
+    ul {
+      li {
+        float: left;
+        width: 25%;
+        margin-bottom: 0;
       }
     }
-  }
-  
-  @media screen and (min-width: $max-width) {
-    .facilities {
-      ul {
-        li {
-          float: left;
-          width: 25%;
-          margin-bottom: 0;
-        }
-      }
+    .right{
+      margin-right: 0px;
+      padding-right: 10px;
+      margin-left: auto;
+
+    }
+    .left{
+      margin-left: 0px;
+      padding-left: 10px;
+      margin-right: auto;
     }
   }
+}
   

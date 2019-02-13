@@ -362,16 +362,16 @@ template {
 
 /* Layout Modal */
 .modal {
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  z-index: 2000;
   background-color: rgba(0, 0, 0, 0.6); }
   .modal .modal-content {
     position: relative;
@@ -404,7 +404,10 @@ template {
       padding: 0 0 1.25rem; }
     .modal .modal-content .modal-body {
       position: relative;
-      display: block; }
+      display: block;
+      overflow-y: auto; }
+      .modal .modal-content .modal-body img {
+        max-width: 600px; }
     .modal .modal-content .modal-footer {
       position: relative;
       display: flex;
@@ -922,10 +925,14 @@ nav[role=main] {
   background-color: #F26522;
   background-image: url(/img/pattern/pattern-dark.svg);
   color: #fafbff; }
+  .notice-board .full-width {
+    padding-top: 60px; }
   .notice-board .message {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    text-align: center; }
+    margin: 30px 20px;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 2px solid #ffffff6b;
+    border-bottom: 2px solid #ffffff6b; }
     .notice-board .message h3 {
       color: #fafbff;
       font-size: 3rem;
@@ -939,7 +946,7 @@ nav[role=main] {
     margin: 60px 20px;
     position: relative;
     padding: 60px 40px 60px 10px;
-    min-height: 10rem;
+    min-height: 11rem;
     border-top: 2px solid #ffffff6b;
     border-right: 2px solid #ffffff6b;
     border-bottom: 2px solid #ffffff6b; }
@@ -990,6 +997,7 @@ nav[role=main] {
 
 .facilities {
   background-color: #373734;
+  padding-bottom: 0px;
   /*
     ul {
       list-style: none;
@@ -1029,14 +1037,19 @@ nav[role=main] {
     min-width: 175px;
     margin: 0 auto; }
   .facilities .right {
-    margin-right: 0;
-    padding-right: 10px; }
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px; }
   .facilities .left {
-    margin-left: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
     padding-left: 10px; }
   .facilities #gym, .facilities #yoga, .facilities #physio, .facilities #coffee {
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding-top: 90px;
     padding-bottom: 90px;
     min-height: 20rem; }
@@ -1052,8 +1065,7 @@ nav[role=main] {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fafbff;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
+    padding: 1rem 1rem 3rem 1rem;
     min-height: 15em; }
   .facilities h3 {
     margin-top: 30px;
@@ -1075,13 +1087,16 @@ nav[role=main] {
 @media screen and (min-width: 600px) {
   .facilities ul li {
     float: left;
-    width: 50%; } }
-
-@media screen and (min-width: 960px) {
-  .facilities ul li {
-    float: left;
     width: 25%;
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .facilities .right {
+    margin-right: 0px;
+    padding-right: 10px;
+    margin-left: auto; }
+  .facilities .left {
+    margin-left: 0px;
+    padding-left: 10px;
+    margin-right: auto; } }
 
 .hours {
   background-color: #bcbdc0;
@@ -1133,6 +1148,10 @@ nav[role=main] {
       display: block; }
     .gallery .img-slot {
       width: 50%; } }
+
+@media screen and (min-width: 1800px) {
+  .gallery .img-slot-hidden {
+    display: block; } }
 
 .about {
   background-color: #bcbdc0;

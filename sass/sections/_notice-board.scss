@@ -1,13 +1,20 @@
 // ---------------------- notice-board ---------------------- //
 .notice-board{
+  .full-width{
+    padding-top: 60px;
+
+  }
     background-color: $color-orange;
     background-image: url(/img/pattern/pattern-dark.svg);
     color: $color-white;
   
     .message{
-      padding-top: 60px;
-      padding-bottom: 30px;
+      margin: 30px 20px;
+      padding: 30px 20px;
       text-align: center;
+      border-top:    2px solid #ffffff6b;
+      //border-right:  2px solid #ffffff6b; 
+      border-bottom: 2px solid #ffffff6b;
       h3{
         color: $color-white;
         font-size: 3rem;
@@ -26,7 +33,7 @@
 
       position: relative;
       padding: 60px 40px 60px 10px;
-      min-height: 10rem;
+      min-height: 11rem;
       
       border-top:    2px solid #ffffff6b;
       border-right:  2px solid #ffffff6b; 

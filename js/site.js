@@ -155,10 +155,10 @@
 
 // Gallery logic
 (function () {
+
   // Order here slightly shuffled to simple avoid duplicates
   var imgPaths = [
-    '/img/gallery/gallery-01.jpg',
-    '/img/gallery/gallery-03.jpg',
+    //'/img/gallery/gallery-01.jpg',
     '/img/gallery/gallery-04.jpg',
     '/img/gallery/gallery-05.jpg',
     '/img/gallery/gallery-06.jpg',
@@ -173,6 +173,7 @@
     '/img/gallery/gallery-14.jpg',
     '/img/gallery/gallery-15.jpg',
     '/img/gallery/gallery-16.jpg',
+    '/img/gallery/gallery-03.jpg',
     '/img/gallery/gallery-18.jpg',
     '/img/gallery/gallery-19.jpg',
     '/img/gallery/gallery-20.jpg'
@@ -201,5 +202,27 @@
         currentImageIndex = 0;
     }, 3000);
   });
+
+
+
+  // Make images clickable for zoom
+  var dynamicImg = document.getElementById('dynamic-image');
+  var imgModal = document.getElementById('image-modal');
+
+  imgModal.addEventListener('click', function (e) {
+    imgModal.classList.add('closed');
+  });
+
+
+  for (var i = 0; i < images.length; ++i) {
+    images[i].addEventListener('click', function (e) {
+      if (imgModal.classList.contains('closed')) {
+        dynamicImg.src = e.target.src;
+        imgModal.classList.remove('closed');
+      } else {
+        imgModal.classList.add('closed');
+      }
+    });
+  }
 
 })();

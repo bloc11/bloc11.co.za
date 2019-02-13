@@ -4,7 +4,6 @@
 <!--
   TODO
   * hero bg image for large screens
-  * notice board, fix styling
   * facilities, fix styling, add content, make link
   * prices, ? add sections
   * better b11 text
@@ -25,12 +24,12 @@
   <header class="main" id="header">
     <nav role="main">
       <ul>
-        <li><a href="#top" class="js-btn">Home</a></li>
-        <li><a href="#notice-board" class="js-btn">Features</a></li>
+        <li><a href="#notice-board" class="js-btn">News</a></li>
+        <li><a href="#gallery" class="js-btn">Gallery</a></li>
         <li><a href="#facilities" class="js-btn">Facilities</a></li>
         <li><a href="#hours" class="js-btn">Hours</a></li>
         <li><a href="#prices" class="js-btn">Prices</a></li>
-        <li><a href="#gallery" class="js-btn">About</a></li>
+        <li><a href="#about" class="js-btn">About</a></li>
         <li><a href="#contact" class="js-btn">Contact</a></li>
         <li><a href="https://vertigogear.co.za/">Shop</a></li>
       </ul>
@@ -58,7 +57,6 @@
 
 
     <section class="notice-board" id="notice-board">
-      <!-- <h2>Notice board</h2> -->
       <div class="full-width">
         <div class="message">
           <h3>New to bouldering</h3>
@@ -89,6 +87,12 @@
       </div>
     </section>
 
+    <section class="container gallery" id="gallery">
+      <img class="js-gallery-img img-slot" src="/img/gallery/gallery-02.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
+      <img class="js-gallery-img img-slot" src="/img/gallery/gallery-18.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
+      <img class="js-gallery-img img-slot" src="/img/gallery/gallery-13.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
+      <img class="js-gallery-img img-slot img-slot-hidden" src="/img/gallery/gallery-14.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
+    </section>
     <section id="movie">
       <div class="full-width">
         <div class="video-container">
@@ -261,14 +265,6 @@
     </section>
 
 
-    <section class="container gallery" id="gallery">
-      <img class="js-gallery-img img-slot" src="/img/gallery/gallery-02.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
-      <img class="js-gallery-img img-slot" src="/img/gallery/gallery-18.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
-      <img class="js-gallery-img img-slot" src="/img/gallery/gallery-13.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
-      <img class="js-gallery-img img-slot img-slot-hidden" src="/img/gallery/gallery-14.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
-    </section>
-
-
     <section class="about" id="about">
       <h2>About us</h2>
       <div class="full-width">
@@ -347,55 +343,14 @@
 
     <div class="modal closed" id="yoga-modal">
       <div class="modal-content">
-        <button class="close-btn js-close-btn">&#9932</button>
         <div class="modal-header">
-          <h2>Yoga information</h2>
+          <button class="close-btn js-close-btn">&#9932</button>
         </div>
         <div class="modal-body">
-
+          <h2>Yoga information</h2>
           <a href="img/yoga/schedule.jpg">
             <img src="img/yoga/schedule.jpg" alt="Bloc11 yoga schedule" style="width: 100%">
           </a>
-          <!-- <table>
-            <thead>
-              <tr>
-                <th>time</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Sun</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>10:00 - 11:00</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>Yoga</th>
-              </tr>
-              <tr>
-                <th>18:00 - 19:00</th>
-                <th>Climbing Fitness</th>
-                <th>Yoga</th>
-                <th>Climbing Fitness</th>
-                </th>
-                <th>Beginner Yoga</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>19:15 - 20:15</th>
-                <th>Slow Flow Yoga</th>
-                <th>Yoga Drills</th>
-                <th>Yoga</th>
-                <th>Budokon</th>
-                <th></th>
-              </tr>
-            </tbody>
-          </table> -->
-
           <h4>Slow Flow Yoga</h4>
           <p>A physically accessible class focused on breathing and stretching. A great slow, strong, and calm yoga practice to start your week!</p>
 
@@ -413,16 +368,14 @@
           <h4>Budokon</h4>
           <p>Budokon fuses martial arts, calisthenics, animal mobility, and yoga into one amazing full mind-body workout.
             Build a sweat and increase your core stability, and body awareness with this steady, dynamic, and strong flow.</p>
-
-
-
-
-
-
         </div>
         <div class="modal-footer">
         </div>
       </div>
+    </div>
+
+    <div class="modal closed" id="image-modal">
+      <img id="dynamic-image" src="/img/gallery/gallery-18.jpg" alt="Bouldering at Bloc11 indoor rock-climbing gym">
     </div>
 
 

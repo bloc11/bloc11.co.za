@@ -14,6 +14,7 @@
   }
 }
 
+// for small screens
 @media screen and (max-width: 1200px) { // based on two 600px wide images
   .gallery{
     flex-wrap: wrap;
@@ -23,6 +24,19 @@
     }
     .img-slot{
       width: 50%;
+    }
+  }
+}
+
+// for super large screens
+@media screen and (min-width: 1800px) { // based on two 600px wide images
+  .gallery{
+
+    .img-slot-hidden{ 
+      display: block;
+    }
+    .img-slot{
+      //width: 50%;
     }
   }
 }
