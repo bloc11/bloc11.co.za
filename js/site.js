@@ -152,31 +152,12 @@
   });
 })();
 
+
 // Gallery logic
 (function () {
-  // function randomInt(min, max) {
-  //   return Math.floor(Math.random() * (max - min)) + min;
-  // }
-
-  function shuffle(array) {
-    var workingArray = []
-    for (var i = 0; i < array.length; i++) {
-      workingArray.push(array[i]);
-    }
-    var currentIndex = workingArray.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = workingArray[currentIndex];
-      workingArray[currentIndex] = workingArray[randomIndex];
-      workingArray[randomIndex] = temporaryValue;
-    }
-    return workingArray;
-  }
-
-  var allImgPaths = [
+  // Order here slightly shuffled to simple avoid duplicates
+  var imgPaths = [
     '/img/gallery/gallery-01.jpg',
-    '/img/gallery/gallery-02.jpg',
     '/img/gallery/gallery-03.jpg',
     '/img/gallery/gallery-04.jpg',
     '/img/gallery/gallery-05.jpg',
@@ -186,6 +167,7 @@
     '/img/gallery/gallery-09.jpg',
     '/img/gallery/gallery-10.jpg',
     '/img/gallery/gallery-11.jpg',
+    '/img/gallery/gallery-02.jpg',
     '/img/gallery/gallery-12.jpg',
     '/img/gallery/gallery-13.jpg',
     '/img/gallery/gallery-14.jpg',
@@ -195,30 +177,28 @@
     '/img/gallery/gallery-19.jpg',
     '/img/gallery/gallery-20.jpg'
   ];
-  var imgPaths = [];
 
-  var allImages = document.getElementsByClassName('js-gallery-img');
-  var images = [];
+  var currentImageIndex = 0;
+  var currentPathIndex = 0;
+
+  var images = document.getElementsByClassName('js-gallery-img');
 
   window.addEventListener("load", function () {
     setInterval(function () {
+      var newPath = imgPaths[currentPathIndex];
 
-      // choose an image from the list of remaining images. If there are none to choose from, reset the list
-      if (images.length < 1)
-        images = shuffle(allImages);
+      // Change image
+      images[currentImageIndex].src = newPath;
 
-      var img = images.shift();
+      // update currentPathIndex
+      currentPathIndex = currentPathIndex + 1;
+      if (currentPathIndex >= imgPaths.length)
+        currentPathIndex = 0;
 
-      // choose the new path for the image
-      if (imgPaths < 1)
-        imgPaths = shuffle(allImgPaths);
-
-      // TODO: There is a chance that there will be a duplicate image. 
-      // Every time the "imgPaths" are shuffled, the new array contains the paths to the images that might already be displayed. 
-
-      var newPath = imgPaths.shift();
-
-      img.src = newPath;
+      // update currentImageIndex
+      currentImageIndex = currentImageIndex + 1;
+      if (currentImageIndex >= images.length)
+        currentImageIndex = 0;
     }, 3000);
   });
 
