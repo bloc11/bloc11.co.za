@@ -1,13 +1,40 @@
 // ---------------------- gallery ---------------------- //
 
 .gallery {
-    .img-slot{
-      width: 33.3333%;
-      float: left;
-      img{
-        width: 100%;
-      }
+  background-color: #373734;
+  background-image: url(/img/pattern/pattern-black.svg);
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding-bottom: 0px;
+
+  .img-slot{
+    //width: 33.3333%;
+    //box-sizing: border-box;
+    //float: left;
+    //max-width: 600px;
+    img{
+      //width: 100%;
+     // max-width:100%;
     }
-    padding-bottom: 0px;
+  } 
+  .img-slot-hidden{ 
+    display: none;
   }
+}
+
+@media screen and (max-width: 1200px) { // based on two 600px wide images
+  .gallery{
+    flex-wrap: wrap;
+  
+    .img-slot-hidden{ 
+      display: block;
+    }
+    .img-slot{
+      width: 50%;
+    }
+  }
+}
+
   
