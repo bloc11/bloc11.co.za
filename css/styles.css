@@ -929,27 +929,28 @@ nav[role=main] {
     .notice-board .message h3 {
       color: #fafbff;
       font-size: 3rem;
-      font-weight: 200; }
+      font-weight: 300; }
     .notice-board .message p {
       color: black;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 400;
-      padding: 0 10px; }
+      padding: 0 10px;
+      text-align: justify; }
   .notice-board .promotion {
     margin: 60px 20px;
     position: relative;
-    padding: 20px 40px 20px 10px;
+    padding: 60px 40px 60px 10px;
     min-height: 10rem;
-    border-top: 2px solid #c2501b6b;
-    border-right: 2px solid #c2501b6b;
-    border-bottom: 2px solid #c2501b6b; }
+    border-top: 2px solid #ffffff6b;
+    border-right: 2px solid #ffffff6b;
+    border-bottom: 2px solid #ffffff6b; }
     .notice-board .promotion .title {
       color: #fafbff;
       font-size: 2rem;
       font-weight: 600; }
     .notice-board .promotion .text {
       color: black;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 500; }
     .notice-board .promotion .info {
       margin-top: 10px;
@@ -961,23 +962,23 @@ nav[role=main] {
       height: 20px;
       position: absolute;
       left: 0;
-      background-color: #c2501b6b; }
+      background-color: #ffffff6b; }
     .notice-board .promotion:before {
       top: 0; }
     .notice-board .promotion:after {
       bottom: 0; }
-  .notice-board .video-container {
+
+#movie {
+  background-color: #373734;
+  background-image: url(/img/pattern/pattern-black.svg);
+  padding-top: 80px; }
+  #movie .video-container {
     position: relative;
     padding-bottom: 56.25%;
     overflow: hidden;
     z-index: 1;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #373734;
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3); }
-    .notice-board .video-container iframe {
+    background-color: #373734; }
+    #movie .video-container iframe {
       z-index: 2;
       left: 0;
       top: 0;
@@ -1099,7 +1100,7 @@ nav[role=main] {
 
 .prices {
   background-color: #373734;
-  background-image: url(/img/pattern/pattern-dark.svg); }
+  background-image: url(/img/pattern/pattern-black.svg); }
   .prices h2 {
     padding-bottom: 20px; }
   .prices p {
