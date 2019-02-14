@@ -30,28 +30,33 @@
     }
   
     .tagline {
-      //margin-top: 4rem;
       text-transform: uppercase;
-      //font-size: 3vh;
       letter-spacing: 4px;
     }
-    //.sub-tagline{
-    //  a{
-    //    text-transform: uppercase;
-    //    color: $color-white;
-    //  }
-    //}
+
   }
   
   // set background image by screen size
   // default
   .welcome{
-    background-image: url(/img/hero/hero-1-1280x1280x60.jpg);
+    background-image: url(/img/hero/hero-1-540x540x60.jpg);
   }
-  // if smaller than
-  @media screen and (max-width: 780px){
+  // if larger than
+  @media screen and (min-width: 540px){
     .welcome{
       background-image: url(/img/hero/hero-1-720x1008x60.jpg);
+    }
+  }
+  // if larger than
+  @media screen and (min-width: 720px){
+    .welcome{
+      background-image: url(/img/hero/hero-1-960x960x60.jpg);
+    }
+  }
+   // if larger than
+   @media screen and (min-width: 960px){
+    .welcome{
+      background-image: url(/img/hero/hero-1-1280x1280x60.jpg);
     }
   }
   // if larger than

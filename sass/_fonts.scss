@@ -11,13 +11,13 @@
 
 @include font-face("proximanova", $proximanova-font-path+"proximanova.thin", 200,  $file-formats: svg eot ttf woff);
 @include font-face("proximanova", $proximanova-font-path+"proximanova.thinitalic", 200, italic,  $file-formats: svg eot ttf woff);
-@include font-face("proximanova", $proximanova-font-path+"proximanova.light", 300, $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.light", 300, $file-formats: svg eot ttf woff);//used
 @include font-face("proximanova", $proximanova-font-path+"proximanova.light.italic", 300, italic,  $file-formats: svg eot ttf woff);
-@include font-face("proximanova", $proximanova-font-path+"proximanova.regular", normal, $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.regular", normal, $file-formats: svg eot ttf woff);//used
 @include font-face("proximanova", $proximanova-font-path+"proximanova.regular.italic", normal, italic,  $file-formats: svg eot ttf woff);
-@include font-face("proximanova", $proximanova-font-path+"proximanova.bold", bold,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.bold", bold,  $file-formats: svg eot ttf woff);//used
 @include font-face("proximanova", $proximanova-font-path+"proximanova.bold.italic", bold, italic,  $file-formats: svg eot ttf woff);
-@include font-face("proximanova", $proximanova-font-path+"proximanova.ebold", 600,  $file-formats: svg eot ttf woff);
+@include font-face("proximanova", $proximanova-font-path+"proximanova.ebold", 600,  $file-formats: svg eot ttf woff);//used
 @include font-face("proximanova", $proximanova-font-path+"proximanova.ebold.italic", 600, italic,  $file-formats: svg eot ttf woff);
 
 

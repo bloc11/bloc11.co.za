@@ -36,32 +36,32 @@
   
     }
     #gym{
-      background-image: url(/img/gym/gym-1280.jpg);
+      background-image: url(/img/gym/gym-600.jpg);
     }
     #yoga{
-      background-image: url(/img/yoga/yoga-1280.jpg);
+      background-image: url(/img/yoga/yoga-600.jpg);
     }
     #physio{
-      background-image: url(/img/physio/physio-1280.jpg);
+      background-image: url(/img/physio/physio-600.jpg);
   
     }
     #coffee{
-      background-image: url(/img/coffee/coffee-1280.jpg);
+      background-image: url(/img/coffee/coffee-600.jpg);
     }
   
     .facility {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.6);
       color: $color-white;
       text-align: center;
       padding:1rem 1rem 3rem 1rem;
       min-height: 15em;
     }
   
-    
-  
     h3{
       margin-top: 30px;
-      color: $color-orange;
+      //color: $color-orange;
+      color: white;
+
       font-size: 2rem;
     }
   
@@ -72,6 +72,7 @@
       color: $color-orange;
       &:hover{
         color: $color-white;
+        cursor: pointer;
       }
     }
   
@@ -81,73 +82,28 @@
       font-size: 50px;
       margin: 20px auto 30px auto;
     }
-  /*
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      overflow: auto;
-  
-      li {
-        box-sizing: border-box;
-        margin-bottom: 40px;
-        padding: 0 20px;
-        text-align: center;
-        color: $color-white;
-      }
-  
-      i {
-        color: $color-white;
-        font-size: 50px;
-        margin-bottom: 20px;
-        display: inline-block;
-      }
-  
-      .label {
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-  
-      .info {
-        @include text;
-      }
+
+  .modal-content{
+    text-align: center;
+    h2{
+      padding-top: 0;
     }
-    */
+    h4{
+      margin-bottom: 5px;
+    }
+    
+    img{
+      max-width: 600px;
+      padding-bottom: 60px;
+    }
+  }
+    
 }
 
-// medium and up
-// @media screen and (min-width: $bp-medium) {
-//   .facilities {
-//     border: 3px solid red;
-//     ul {
-//       li {
-//         float: left;
-//         width: 50%;
-//       }
-//     }
-//     .right{
-//       margin-right: 0px;
-//       padding-right: 10px;
-//     }
-//     .left{
-//       margin-left: 0px;
-//       padding-left: 10px;
-//     }
-//   }
-// }
 
 // large screens
 @media screen and (min-width: $bp-medium) {
   .facilities {
-    ul {
-      li {
-        float: left;
-        width: 25%;
-        margin-bottom: 0;
-      }
-    }
     .right{
       margin-right: 0px;
       padding-right: 10px;
@@ -161,4 +117,43 @@
     }
   }
 }
+
+
+// bigger than 600 x 2 
+@media screen and (min-width: 1200px) {
+  #gym{
+    background-image: url(/img/gym/gym-900.jpg);
+  }
+  #yoga{
+    background-image: url(/img/yoga/yoga-900.jpg);
+  }
+  #physio{
+    background-image: url(/img/physio/physio-900.jpg);
+  
+  }
+  #coffee{
+    background-image: url(/img/coffee/coffee-900.jpg);
+  }
+}
+
+// bigger than 900 x 2
+@media screen and (min-width: 1800px) {
+  #gym{
+    background-image: url(/img/gym/gym-1280.jpg);
+  }
+  #yoga{
+    background-image: url(/img/yoga/yoga-1280.jpg);
+  }
+  #physio{
+    background-image: url(/img/physio/physio-1280.jpg);
+  
+  }
+  #coffee{
+    background-image: url(/img/coffee/coffee-1280.jpg);
+  }
+}
+
+
+
+
   
