@@ -1,0 +1,28 @@
+// ---------------------- hours ---------------------- //
+
+.hours{
+    background-color: #bcbdc0;
+    background-image: url(/img/pattern/pattern-dark.svg);
+  
+    h2{
+      color: $color-white;
+    }
+  
+    table{
+      margin: 0 auto;
+    }
+    td{
+      padding: 2px 10px;
+    }
+    .large td{
+      content: "";
+      height: 1rem;
+    }
+    .day{
+      color: $color-grey;
+    }
+    .time{
+      font-weight: 500;
+    }
+  }
+  

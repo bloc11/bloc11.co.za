@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dream higher donation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bloc 11, cape town bouldering gym, dream higher" />
+  <script src="jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+
+<body>
+  <div id="container2">
+    <div id="error">
+      &nbsp;
+    </div>
+    <div class="spaced">
+      Your full name (first and last name):
+    </div>
+    <br /><input id="reference" type="text" length=20 /><br />
+    <input type="radio" name="price" value="50">R50<br />
+    <input type="radio" name="price" value="100">R100<br />
+    <input type="radio" name="price" value="custom">Custom <input type="text" id="custom-value" /><br />
+    <button id="paybutton" onclick="pay()">Donate!</button>
+  </div>
+  <script type="text/javascript" src="/dreamhigher.js"></script>
+  <form action="https://bloc11.co.za/finish.html" class="paymentWidgets" data-brands="VISA MASTER AMEX">
+  </form>
+</body>
+
+</html>

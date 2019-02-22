@@ -1,0 +1,159 @@
+// ---------------------- facilities ---------------------- //
+
+.facilities {
+    background-color: $color-grey;
+    padding-bottom: 0px;
+    
+  
+  
+    .half-width{
+      max-width: 480px;
+      min-width: 175px;
+      margin: 0 auto;
+    }
+  
+    .right{
+      margin-right: 10px;
+      margin-left: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .left{
+      margin-right: 10px;
+      margin-left: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  
+    // background images by id
+    #gym, #yoga, #physio, #coffee{
+      background-repeat: no-repeat;
+      background-position: center; 
+      background-size: cover;
+      padding-top: 90px;
+      padding-bottom: 90px;
+      min-height: 20rem;
+  
+    }
+    #gym{
+      background-image: url(/img/gym/gym-600.jpg);
+    }
+    #yoga{
+      background-image: url(/img/yoga/yoga-600.jpg);
+    }
+    #physio{
+      background-image: url(/img/physio/physio-600.jpg);
+  
+    }
+    #coffee{
+      background-image: url(/img/coffee/coffee-600.jpg);
+    }
+  
+    .facility {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: $color-white;
+      text-align: center;
+      padding:1rem 1rem 3rem 1rem;
+      min-height: 15em;
+    }
+  
+    h3{
+      margin-top: 30px;
+      //color: $color-orange;
+      color: white;
+
+      font-size: 2rem;
+    }
+  
+    button{
+      margin-top: 2rem;
+      border: none;
+      background-color: transparent;
+      color: $color-orange;
+      &:hover{
+        color: $color-white;
+        cursor: pointer;
+      }
+    }
+  
+    i {
+      display: block;
+      color: $color-white;
+      font-size: 50px;
+      margin: 20px auto 30px auto;
+    }
+
+  .modal-content{
+    text-align: center;
+    h2{
+      padding-top: 0;
+    }
+    h4{
+      margin-bottom: 5px;
+    }
+    
+    img{
+      max-width: 600px;
+      padding-bottom: 60px;
+    }
+  }
+    
+}
+
+
+// large screens
+@media screen and (min-width: $bp-medium) {
+  .facilities {
+    .right{
+      margin-right: 0px;
+      padding-right: 10px;
+      margin-left: auto;
+
+    }
+    .left{
+      margin-left: 0px;
+      padding-left: 10px;
+      margin-right: auto;
+    }
+  }
+}
+
+
+// bigger than 600 x 2 
+@media screen and (min-width: 1200px) {
+  #gym{
+    background-image: url(/img/gym/gym-900.jpg);
+  }
+  #yoga{
+    background-image: url(/img/yoga/yoga-900.jpg);
+  }
+  #physio{
+    background-image: url(/img/physio/physio-900.jpg);
+  
+  }
+  #coffee{
+    background-image: url(/img/coffee/coffee-900.jpg);
+  }
+}
+
+// bigger than 900 x 2
+@media screen and (min-width: 1800px) {
+  #gym{
+    background-image: url(/img/gym/gym-1280.jpg);
+  }
+  #yoga{
+    background-image: url(/img/yoga/yoga-1280.jpg);
+  }
+  #physio{
+    background-image: url(/img/physio/physio-1280.jpg);
+  
+  }
+  #coffee{
+    background-image: url(/img/coffee/coffee-1280.jpg);
+  }
+}
+
+
+
+
+  

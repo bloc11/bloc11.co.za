@@ -1,0 +1,25 @@
+// ---------------------- location ---------------------- //
+
+.location {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+  
+    #map {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    #map-overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+  
+      &.hide {
+        display: none;
+      }
+    }
+  }

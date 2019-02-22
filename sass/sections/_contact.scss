@@ -1,0 +1,65 @@
+// ---------------------- contact ---------------------- //
+
+.contact {
+    background-color: $color-white;
+    background-image: url(/img/pattern/pattern-light.svg);
+    background-position: right;
+  
+  
+    h2 {
+      color: $color-grey;
+      padding-bottom: 20px;
+    }
+  
+    .info {
+      font-size: 15px;
+      //font-style: italic;
+      font-weight: 300;
+  
+      width: 85%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .wrapper {
+      margin-top: 50px;
+    }
+  
+    .details {
+      box-sizing: border-box;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      @include text;
+    }
+  
+    .name {
+      font-weight: bold;
+    }
+  
+    .name, .address, .phone {
+      margin-bottom: 20px;
+    }
+  
+    #contact-form {
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      width: 65%;
+      padding-left: 10%;
+  
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  
+    strong {
+      display: inline-block;
+      width: 25px;
+    }
+  
+    a {
+      color: $color-orange;
+    }
+  }
+  

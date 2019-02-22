@@ -1,0 +1,54 @@
+/* Layout Grid */
+
+$single-col-breakpoint: 540px; //320, 540, 720, 960
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.row [class^="col"] {
+  float: left;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (min-width: $single-col-breakpoint){
+    .col-1 { width:(100% / 12); }
+    .col-2 { width: (100% / 6); }
+    .col-3 { width: (100% / 4); }
+    .col-4 { width: (100% / 3); }
+    .col-5 { width: (100% / (12 / 5)); }
+    .col-6 { width: (100% / 2); }
+    .col-7 { width: (100% / (12 / 7)); }
+    .col-8 { width: (100% / (12 / 8)); }
+    .col-9 { width: (100% / (12 / 9)); }
+    .col-10 { width: (100% / (12 / 10)); }
+    .col-11 { width: (100% / (12 / 11)); }
+    .col-12 { width: 100%; }
+}
