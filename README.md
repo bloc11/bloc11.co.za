@@ -1,29 +1,32 @@
-Bloc 11 main website
+# Bloc 11 website
 
-### Compile sass
+### Dev environment prerequisites
+* Node and npm
 
-### Prerequisites
-
+### Dev Scripts
 ```bash
-# Install (global/alias) sass
-gem install sass
-# Install node-sass from package.json
-npm install
-```
+# Serve site to to http://localhost:8080/
+npm run serve
+# or with python
+python -m SimpleHTTPServer 8080 index.html        
 
-```bash
-# Compile with
+# Compile sass with
 npm run build-sass
-# Or, watch sass and compile
+
+# Minify the css file
+npm run minify
+
+# Runs 'build-sass' then runs 'minify-css' when ever it detects changes to '.sass' and '.scss' files
 npm run watch-sass
 ```
 
-### Preview:
+### Dev dependencies
+* https://www.npmjs.com/package/http-server
+* https://www.npmjs.com/package/node-sass
+* https://www.npmjs.com/package/clean-css-cli
+* https://www.npmjs.com/package/nodemon
 
-```bash
-python -m SimpleHTTPServer 8080 index.html        
-```
 
-### TODO:
+## TODO:
 
 - Go climb

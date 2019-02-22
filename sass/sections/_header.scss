@@ -1,0 +1,113 @@
+// ---------------------- header and navigation ---------------------- //
+
+header.main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    z-index: 100;
+    transition: .3s ease-in-out;
+  
+    a {
+      color: $color-white;
+    }
+  
+    &.floating {
+      padding-top: 0;
+      background-color: $color-white;
+      opacity: 0.95;
+  
+      a {
+        color: $color-grey;
+      }
+  
+      nav[role=main] {
+        ul {
+          li:before {
+            color: $color-grey;
+          }
+        }
+      }
+    }
+  }
+  
+  nav[role=main] {
+    max-width: $max-width;
+    min-width: $min-width;
+    margin: 0 auto;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      //overflow-y: auto;
+      margin: 0 10%;
+  
+      li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        position: relative;
+  
+        &:before {
+          font-family: 'icons';
+          content: "\e904";
+          display: block;
+          position: absolute;
+          top: -1px;
+          line-height: $header-height;
+          width: 100%;
+          bottom: 0;
+          font-size: $header-height;
+          color: $color-white;
+          transition: opacity .3s ease-in-out;
+          opacity: 0;
+        }
+  
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+  
+      a {
+        height: $header-height;
+        line-height: $header-height;
+        text-transform: uppercase;
+        display: block;
+        font-size: 12px;
+        position: relative;
+        z-index: 1;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: $bp-medium) {
+    // shrink text
+    nav[role=main] {
+      ul {
+        a {
+          font-size: 10px;
+          letter-spacing: 2px;
+          height: $header-height*0.8;
+          line-height: $header-height*0.8;
+        }
+        margin: 0 5px;
+      }
+    }
+  }
+  
+  
+  @media screen and (min-width: $max-width) {
+    .packages {
+      .option {
+        width: 33%;
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+  

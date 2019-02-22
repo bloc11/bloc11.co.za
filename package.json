@@ -5,12 +5,17 @@
   "main": "site.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-sass": "node_modules/node-sass/bin/node-sass --include-path sass sass/styles.scss styles.css",
-    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+    "build-sass": "node ./node_modules/node-sass/bin/node-sass --include-path sass ./sass/styles.scss ./css/styles.css",
+    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
+    "watch-sass": "nodemon -e scss,sass -x \"npm run build-sass && npm run minify-css\"",
+    "serve": "node ./node_modules/http-server/bin/http-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^3.10.1"
+    "http-server": "^0.11.1",
+    "node-sass": "^4.11.0",
+    "clean-css-cli": "^4.2.1",
+    "nodemon": "^1.18.9"
   }
 }
