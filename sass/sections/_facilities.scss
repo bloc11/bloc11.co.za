@@ -29,6 +29,9 @@
     #gym, #yoga, #physio, #coffee{
       background-repeat: no-repeat;
       background-position: center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
       padding-top: 90px;
       padding-bottom: 90px;
