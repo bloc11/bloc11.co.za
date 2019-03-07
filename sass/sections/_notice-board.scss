@@ -73,3 +73,13 @@
       
     }
   }
+
+  @media screen and (max-width: $bp-medium) {
+    .notice-board {
+      .message {
+        h3{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
