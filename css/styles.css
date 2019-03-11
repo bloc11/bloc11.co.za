@@ -922,9 +922,9 @@ nav[role=main] {
     margin: 60px 20px;
     position: relative;
     padding: 60px 40px 60px 10px;
-    border-top: 2px solid #ffffff6b;
-    border-right: 2px solid #ffffff6b;
-    border-bottom: 2px solid #ffffff6b; }
+    border-top: 2px solid #f7a67f;
+    border-right: 2px solid #f7a67f;
+    border-bottom: 2px solid #f7a67f; }
     .notice-board .promotion .title {
       color: #fafbff;
       font-size: 2rem;
@@ -943,7 +943,7 @@ nav[role=main] {
       height: 20px;
       position: absolute;
       left: 0;
-      background-color: #ffffff6b; }
+      background-color: #f7a67f; }
     .notice-board .promotion:before {
       top: 0; }
     .notice-board .promotion:after {
