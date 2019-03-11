@@ -20,3 +20,9 @@
       a{    color: black;  }
     }
   }
+
+@media screen and (max-width: $bp-medium) {
+  .link-banner {
+    font-size: 1.2rem;
+  }
+}

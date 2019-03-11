@@ -893,6 +893,10 @@ nav[role=main] {
     .link-banner:hover a {
       color: black; }
 
+@media screen and (max-width: 600px) {
+  .link-banner {
+    font-size: 1.2rem; } }
+
 .notice-board {
   background-color: #F26522;
   background-image: url(/img/pattern/pattern-dark.svg);
@@ -947,7 +951,7 @@ nav[role=main] {
 
 @media screen and (max-width: 600px) {
   .notice-board .message h3 {
-    font-size: 2rem; } }
+    font-size: 1.8rem; } }
 
 #movie {
   background-color: #373734;
