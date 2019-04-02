@@ -33,6 +33,8 @@
 
         .close-btn{
             position: relative;
+            font-size: 2rem;
+            line-height: 2.4rem;
             bottom:1rem;
             left: 1rem;
             margin-top: 0;
@@ -40,8 +42,9 @@
             z-index: 1;
             border: none;
             background-color: transparent;
-            color: black;
+            color: rgb(37, 37, 37);
             &:hover{
+                color: #000000;
                 cursor: pointer;
               }
         }

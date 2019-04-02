@@ -388,6 +388,8 @@ template {
     box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5); }
     .modal .modal-content .close-btn {
       position: relative;
+      font-size: 2rem;
+      line-height: 2.4rem;
       bottom: 1rem;
       left: 1rem;
       margin-top: 0;
@@ -395,8 +397,9 @@ template {
       z-index: 1;
       border: none;
       background-color: transparent;
-      color: black; }
+      color: #252525; }
       .modal .modal-content .close-btn:hover {
+        color: #000000;
         cursor: pointer; }
     .modal .modal-content .modal-body {
       position: relative;
