@@ -1540,29 +1540,3 @@ nav[role=main] {
     height: 100%; }
     .location #map-overlay.hide {
       display: none; }
-
-.olympics {
-  background-color: #373734;
-  background-image: url(/img/pattern/pattern-black.svg);
-  color: #aaadb1; }
-  .olympics table {
-    border-spacing: 0;
-    border: 0;
-    width: 100%; }
-  .olympics .table-wrapper {
-    overflow-x: auto; }
-  .olympics tr {
-    background-color: #2b2b29; }
-  .olympics tr:nth-child(odd) {
-    background-color: #30302e; }
-  .olympics tr:hover {
-    background-color: #444441; }
-  .olympics th, .olympics td {
-    text-align: left;
-    padding: 12px; }
-  .olympics th {
-    background-color: #1f1f1d; }
-  .olympics td {
-    border-bottom: 1px solid #494948; }
-  .olympics section {
-    border: none; }
