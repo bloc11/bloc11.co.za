@@ -30,6 +30,15 @@
 
   <main>
     <section class="welcome" id="top">
+      <div class="img-container">
+        <img class="img-full-screen" srcset="./img/hero/hero-1-540x540x60.jpg 540w,
+                ./img/hero/hero-1-960x960x60.jpg 960w,
+                ./img/hero/hero-1-1280x1280x60.jpg 1280w,
+                ./img/hero/hero-1-2560x1280x60.jpg 2560w" sizes="(max-width: 540px) 540px,
+              (max-width: 960px) 960px,
+              (max-width: 1280px) 1280px,
+              2560px" src="./img/hero/hero-1-2560x1280x60.jpg" alt="Climbing at Bloc11, Cape Towns best indoor bouldering gym">
+      </div>
       <div class="brand">
         <i class="icon-logo"></i>
         <div class="tagline">Climbing &amp; Fitness</div>
@@ -42,7 +51,6 @@
       </div>
       <div class="link-banner">
         <!-- Change this link to change the banner at the bottom of the home section -->
-        <!-- <a href="#">Boulder League score card</a> -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSezbjq5-5Ss--_RcwciP9bIlY8drdFjQTpPAjEMUA1NiEMD3w/viewform">Boulder league scorecard</a>
       </div>
     </section>
@@ -177,7 +185,7 @@
       <!-- Yoga Modal -->
       <div class="modal closed" id="yoga-modal">
         <div class="modal-content">
-          <button class="close-btn js-close-btn">&#9932;</button>
+          <button class="close-btn js-close-btn">&times;</button>
           <div class="modal-body">
             <h2>Yoga timetable</h2>
             <a href="img/yoga/schedule.jpg">
@@ -210,7 +218,7 @@
     <!-- Gym Modal -->
     <div class="modal closed" id="gym-modal">
       <div class="modal-content">
-        <button class="close-btn js-close-btn">&#9932;</button>
+        <button class="close-btn js-close-btn">&times;</button>
         <div class="modal-body">
           <ul>
             <li>Moon board</li>
@@ -240,7 +248,7 @@
             </tr>
             <tr>
               <td class="day">Tuesday</td>
-              <td class="time">7am - 10pm</td>
+              <td class="time">10am - 10pm</td>
             </tr>
             <tr>
               <td class="day tooltip">Wednesday<span class="tip">Student night</span></td>

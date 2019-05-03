@@ -388,6 +388,8 @@ template {
     box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5); }
     .modal .modal-content .close-btn {
       position: relative;
+      font-size: 2rem;
+      line-height: 2.4rem;
       bottom: 1rem;
       left: 1rem;
       margin-top: 0;
@@ -395,8 +397,9 @@ template {
       z-index: 1;
       border: none;
       background-color: transparent;
-      color: black; }
+      color: #252525; }
       .modal .modal-content .close-btn:hover {
+        color: #000000;
         cursor: pointer; }
     .modal .modal-content .modal-body {
       position: relative;
@@ -474,34 +477,6 @@ template {
     text-align: left;
     display: block;
     margin: 30px auto 0; }
-
-.tooltip {
-  position: relative;
-  display: inline-block; }
-  .tooltip:hover .tip {
-    visibility: visible; }
-  .tooltip .tip {
-    visibility: hidden;
-    min-width: 120px;
-    width: 200px;
-    background-color: #373734;
-    color: #fafbff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 110%; }
-    .tooltip .tip:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      margin-top: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent #373734 transparent transparent; }
 
 a {
   color: #373734;
@@ -812,12 +787,29 @@ nav[role=main] {
   margin: 0 auto;
   height: 100vh;
   background-color: #373734;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   z-index: 0;
   padding-top: 20vh;
   box-sizing: border-box; }
+  .welcome .img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+  .welcome .img-full-screen {
+    z-index: -10;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto;
+    min-height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
   .welcome .brand {
     max-width: 960px;
     min-width: 320px;
@@ -831,25 +823,6 @@ nav[role=main] {
   .welcome .tagline {
     text-transform: uppercase;
     letter-spacing: 4px; }
-
-.welcome {
-  background-image: url(/img/hero/hero-1-540x540x60.jpg); }
-
-@media screen and (min-width: 540px) {
-  .welcome {
-    background-image: url(/img/hero/hero-1-720x1008x60.jpg); } }
-
-@media screen and (min-width: 720px) {
-  .welcome {
-    background-image: url(/img/hero/hero-1-960x960x60.jpg); } }
-
-@media screen and (min-width: 960px) {
-  .welcome {
-    background-image: url(/img/hero/hero-1-1280x1280x60.jpg); } }
-
-@media screen and (min-width: 1280px) {
-  .welcome {
-    background-image: url(/img/hero/hero-1-2560x1280x60.jpg); } }
 
 @media screen and (min-width: 380px) {
   .welcome .icon-logo {
@@ -923,6 +896,10 @@ nav[role=main] {
     .link-banner:hover a {
       color: black; }
 
+@media screen and (max-width: 600px) {
+  .link-banner {
+    font-size: 1.2rem; } }
+
 .notice-board {
   background-color: #F26522;
   background-image: url(/img/pattern/pattern-dark.svg);
@@ -948,9 +925,9 @@ nav[role=main] {
     margin: 60px 20px;
     position: relative;
     padding: 60px 40px 60px 10px;
-    border-top: 2px solid #ffffff6b;
-    border-right: 2px solid #ffffff6b;
-    border-bottom: 2px solid #ffffff6b; }
+    border-top: 2px solid #f7a67f;
+    border-right: 2px solid #f7a67f;
+    border-bottom: 2px solid #f7a67f; }
     .notice-board .promotion .title {
       color: #fafbff;
       font-size: 2rem;
@@ -969,11 +946,15 @@ nav[role=main] {
       height: 20px;
       position: absolute;
       left: 0;
-      background-color: #ffffff6b; }
+      background-color: #f7a67f; }
     .notice-board .promotion:before {
       top: 0; }
     .notice-board .promotion:after {
       bottom: 0; }
+
+@media screen and (max-width: 600px) {
+  .notice-board .message h3 {
+    font-size: 1.8rem; } }
 
 #movie {
   background-color: #373734;
@@ -1016,6 +997,9 @@ nav[role=main] {
   .facilities #gym, .facilities #yoga, .facilities #physio, .facilities #coffee {
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     padding-top: 90px;
     padding-bottom: 90px;
@@ -1126,11 +1110,14 @@ nav[role=main] {
 
 .gallery {
   background-color: #373734;
-  background-image: url(/img/pattern/pattern-black.svg);
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
   padding-bottom: 0px; }
+  .gallery .img-slot {
+    width: 100%;
+    height: 100%;
+    min-width: 30%; }
   .gallery .img-slot-hidden {
     display: none; }
 
@@ -1144,7 +1131,9 @@ nav[role=main] {
 
 @media screen and (min-width: 1800px) {
   .gallery .img-slot-hidden {
-    display: block; } }
+    display: block; }
+  .gallery .img-slot {
+    min-width: 25%; } }
 
 .about {
   background-color: #bcbdc0;
