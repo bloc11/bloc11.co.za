@@ -1245,6 +1245,8 @@ nav[role=main] {
     -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3); }
+  .notice-board .text-left {
+    text-align: left; }
   .notice-board .message {
     margin: 30px 20px;
     padding: 30px 20px;
@@ -1260,6 +1262,8 @@ nav[role=main] {
       font-size: 1.2rem;
       font-weight: 400;
       padding: 0 10px; }
+    .notice-board .message a {
+      color: white; }
   .notice-board .promotion {
     margin: 60px 20px;
     position: relative;
