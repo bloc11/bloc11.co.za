@@ -1076,3 +1076,7 @@ nav[role=main] {
 .paybutton {
   width: 30%;
 }
+
+.block {
+  margin-bottom: 20px;
+}
