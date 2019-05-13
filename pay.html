@@ -16,15 +16,19 @@
              Your full name (first and last name):
          </div>
          <br/><input id="reference" type="text" length=20/><br/>
-         <select onchange="recompute()">
-          <option selected value="member">I am a member</option>
-          <option value="non-member">Not a member</option>
-         </select><br/>
-         <select onchange="recompute()">
-          <option selected value="no-tshirt">I don't want a t-shirt</option>
-          <option value="tshirt">I want a gravity bowl t shirt!</option>
-         </select><br/>
-         <button class="paybutton" onclick="pay()">Pay R150</button>
+         <div>
+           <div>Are you a member?</div>
+           <input type="radio" name="member" selected value="member">I am a member<br/>
+           <input type="radio" name="member" value="non-member">Not a member<br/>
+         </div>
+
+         <div>
+           <div>Do you need a t-shirt?</div>
+           <input type="radio" name="tshirt" selected value="tshirt">Yes! (extra R100)<br/>
+           <input type="radio" name="tshirt" value="no-tshirt">No, I don't want a gravity bowl t-shirt<br/>
+         </div>
+
+         <button class="paybutton" onclick="pay()">Pay R250</button>
       </div>
       <script type="text/javascript" src="/pay.js"></script>
       <form action="https://bloc11.co.za/finish.html" class="paymentWidgets" data-brands="VISA MASTER AMEX">
