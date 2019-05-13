@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bloc11 payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Bloc 11, cape town bouldering gym"/>
+    <script src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+  <body>
+      <div id="container2">
+         <div class="spaced">
+             Your full name (first and last name):
+         </div>
+         <br/><input id="reference" type="text" length=20/><br/>
+         <button id="paybutton" onclick="pay()">Pay R100</button>
+      </div>
+      <script type="text/javascript" src="/pay.js"></script>
+      <form action="https://bloc11.co.za/finish.html" class="paymentWidgets" data-brands="VISA MASTER AMEX">
+      </form>
+  </body>
+</html>
