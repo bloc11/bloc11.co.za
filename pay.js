@@ -15,7 +15,7 @@ function recompute() {
 }
 
 function pay() {
-    $.get("/pay?reference=" + $("#reference")[0].value.replace(" ", "-"), function (r) {
+    $.get("/pay?reference=" + $("#reference")[0].value.replace(" ", "-") + "&value=" + val, function (r) {
         eval(JSON.parse(r)['form']);
     });
 }
