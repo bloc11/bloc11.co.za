@@ -1,0 +1,49 @@
+/* utility - spacing */
+/* p, m, t, b, l, r, x, y = padding, margin, top, bottom, left, right, horizontal, vertical */
+
+@mixin spacing-builder($property, $prefix, $suffix, $size){
+    .#{$prefix}-#{$suffix}{
+        #{$property}: $size;
+    }
+    .#{$prefix}t-#{$suffix}{
+        #{$property}-top: $size;
+    }
+    .#{$prefix}b-#{$suffix}{
+        #{$property}-bottom: $size;
+    }
+    .#{$prefix}l-#{$suffix}{
+        #{$property}-left: $size;
+    }
+    .#{$prefix}r-#{$suffix}{
+        #{$property}-right: $size;
+    }
+    .#{$prefix}y-#{$suffix}{
+        #{$property}-top: $size;
+        #{$property}-bottom: $size;
+    }
+    .#{$prefix}x-#{$suffix}{
+        #{$property}-left: $size;
+        #{$property}-right: $size;
+    }
+}
+
+@include spacing-builder(padding, p, 0, 0);
+@include spacing-builder(padding, p, 1, 1rem);
+@include spacing-builder(padding, p, 2, 2rem);
+@include spacing-builder(padding, p, 3, 3rem);
+@include spacing-builder(padding, p, 4, 6rem);
+@include spacing-builder(padding, p, 5, 8rem);
+@include spacing-builder(padding, p, 6, 12rem);
+
+@include spacing-builder(margin, m, 0, 0);
+@include spacing-builder(margin, m, 1, 1rem);
+@include spacing-builder(margin, m, 2, 2rem);
+@include spacing-builder(margin, m, 3, 3rem);
+@include spacing-builder(margin, m, 4, 6rem);
+@include spacing-builder(margin, m, 5, 8rem);
+@include spacing-builder(margin, m, 6, 12rem);
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
