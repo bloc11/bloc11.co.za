@@ -1073,6 +1073,6 @@ nav[role=main] {
   padding-bottom: 20px;
 }
 
-#paybutton {
+.paybutton {
   width: 30%;
 }
