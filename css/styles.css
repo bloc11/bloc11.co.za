@@ -1248,6 +1248,10 @@ nav[role=main] {
       font-size: 1.2rem;
       font-weight: 400;
       padding: 0 10px; }
+    .notice-board .message a {
+      color: white; }
+    .notice-board .message a:hover {
+      color: lightgray; }
   .notice-board .promotion {
     margin: 60px 20px;
     position: relative;
