@@ -1264,6 +1264,8 @@ nav[role=main] {
       padding: 0 10px; }
     .notice-board .message a {
       color: white; }
+    .notice-board .message a:hover {
+      color: lightgray; }
   .notice-board .promotion {
     margin: 60px 20px;
     position: relative;
