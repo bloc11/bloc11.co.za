@@ -1,0 +1,50 @@
+/* Re-sets */
+.full-width{ padding: 0 10px; }
+section{ border: none; }
+
+/* Text */
+a{ color: white; }
+h1{ color: #F26522; }
+h3{
+    color: #aaadb1;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.text-center{ text-align: center; }
+li { margin-bottom: 12px; }
+p, li{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Page elements */
+.olympics{
+    background-color: #373734;
+    background-image: url(/img/pattern/pattern-black.svg);
+    color: #aaadb1;
+}
+.header{
+    text-align: center;
+    margin-top: 3rem;
+}
+.logo{ font-size: 8rem; }
+.logo:hover{ color: #aaadb1; }
+
+/* Tables */
+.table-wrapper{ overflow-x: auto;}
+table{
+    border-spacing: 0;
+    border: 0;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 12px;
+}
+th{ background-color: #1f1f1d; }
+td{ border-bottom: 1px solid #494948; }
+tr{ background-color: #2b2b29; }
+tr:nth-child(odd) { background-color: #30302e; }
+tr:hover{ background-color: #444441; }
+.table-highlight{ color: #F26522; }
