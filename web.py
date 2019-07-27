@@ -27,8 +27,8 @@ class Pay(Resource):
         request.finish()
 
     def render_GET(self, request):
-        price = "100"
         ref = request.args['reference'][0]
+        price = request.args['value'][0]
         conf = get_config()
         url = conf.get('payment', 'base') + '/v1/checkouts'
         data = {
