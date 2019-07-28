@@ -1,0 +1,68 @@
+/* Re-sets */
+.full-width{ padding: 0 10px; }
+section{ border: none; }
+
+/* Text */
+p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-bottom: 1.4rem;
+}
+a{ color: white; }
+h1{ color: #F26522; }
+h3{
+    color: #aaadb1;
+    text-align: center;
+    margin-bottom: 12px;
+}
+strong{
+    color: white;
+}
+
+/* tables */
+
+table{
+    margin: 0 auto;
+    border-spacing: 0;
+    border: 0;
+    margin-bottom: 1rem;
+}
+th{
+    padding: 9px;
+}
+td {
+    text-align: left;
+    padding: 9px;
+}
+
+tr:hover{ background-color: #444441; }
+
+/* Page elements */
+
+.beginners{
+    background-color: #373734;
+    background-image: url(/img/pattern/pattern-black.svg);
+    color: #aaadb1;
+}
+
+.header{
+    text-align: center;
+    margin-top: 3rem;
+}
+.logo{ font-size: 8rem; }
+.logo:hover{ color: #aaadb1; }
+
+.grades td{
+    border: 1px solid #575757;
+}
+
+.jargon td{
+    border-bottom: 1px solid #575757;
+}
+.jargon-word{
+    font-weight: 700;
+}
+.video-container{ text-align: center; }
+
+
