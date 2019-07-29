@@ -1305,22 +1305,23 @@ nav[role=main] {
   background-color: #373734;
   background-image: url(/img/pattern/pattern-black.svg);
   padding-top: 80px; }
-  #movie .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3); }
-    #movie .video-container iframe {
-      z-index: 2;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      position: absolute; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3); }
+  .video-container iframe {
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
 
 .facilities {
   background-color: #373734;
@@ -1558,3 +1559,19 @@ nav[role=main] {
     height: 100%; }
     .location #map-overlay.hide {
       display: none; }
+
+#reviews {
+  background-color: #373734;
+  background-image: url(/img/pattern/pattern-black.svg); }
+  #reviews .review {
+    margin: 0 16px;
+    padding: 16px 0;
+    border-top: 1px solid #F26522;
+    border-bottom: 1px solid #F26522; }
+  #reviews .review-text {
+    font-size: 16px;
+    color: #d9d9d9; }
+  #reviews .review-person {
+    font-style: italic;
+    font-size: 14px;
+    color: #8f8f8f; }
