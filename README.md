@@ -19,6 +19,8 @@ npm run minify
 # Runs 'build-sass' then runs 'minify-css' when ever it detects changes to '.sass' and '.scss' files
 npm run watch-sass
 ```
+## Flags
+http://flag-icon-css.lip.is/
 
 ### Dev dependencies
 * https://www.npmjs.com/package/http-server
