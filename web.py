@@ -7,10 +7,53 @@ from twisted.internet import reactor
 from twisted.internet.defer import inlineCallbacks
 from twisted.python import log
 
+from fpdf import FPDF
 
 from authsys_common.scripts import get_config
 
 log.startLogging(sys.stderr, setStdout=0)
+
+HTML = """
+<html>
+<head>
+</head>
+<body>
+  <form action="bloc11voucher" method="post">
+    <h1>Voucher generator</h1>
+    <div>
+      Name and surname: <input type="text" name="name">
+    </div>
+    <div>
+      Voucher reason: <input type="text" name="reason">
+    </div>
+    <div>
+      Extra info: <input type="text" name="extra">
+    </div>
+    <input type="submit" value="Generate">
+  </form>
+</body>
+</html>
+"""
+
+class GenPdf(Resource):
+    isLeaf = True
+
+    def render_GET(self, request):
+        return HTML
+
+class Bloc11Voucher(Resource):
+    isLeaf = True
+
+    def render_POST(self, request):
+        f = FPDF('P', 'mm', 'A4')
+        f.add_page()
+        f.image('voucher_template.png', 0, 0, MAX_X, MAX_Y)
+        f.set_font('Arial', '', 20)
+        f.text(70, 165, request.args['name'][0])
+        f.text(70, 201, request.args['reason'][0])
+        f.text(70, 236, request.args['extra'][0])
+        request.setHeader('Content-Type', "application/pdf")
+        return f.output(dest='S')
 
 
 class Pay(Resource):
@@ -113,6 +156,8 @@ if len(sys.argv) > 1 and sys.argv[1] == '--create':
 
 resource = File(os.getcwd())
 resource.putChild("pay", Pay())
+resource.putChild("gen_pdf", GenPdf())
+resource.putChild("bloc11voucher", Bloc11Voucher())
 resource.putChild("donate", Donate())
 resource.putChild("finish_check", Finish())
 factory = Site(resource)
