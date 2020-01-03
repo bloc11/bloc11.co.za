@@ -29,6 +29,9 @@ HTML = """
     <div>
       Extra info: <input type="text" name="extra">
     </div>
+    <div>
+      Voucher number (<b>important!</b>): <input type="text" name="number">
+    </div>
     <input type="submit" value="Generate">
   </form>
 </body>
@@ -56,6 +59,8 @@ class Bloc11Voucher(Resource):
         f.text(70, 165, request.args['name'][0])
         f.text(70, 201, request.args['reason'][0])
         f.text(70, 236, request.args['extra'][0])
+        f.set_font('Arial', '', 14)
+        f.text(165, 257, request.args['number'])
         request.setHeader('Content-Type', "application/pdf")
         return f.output(dest='S')
 

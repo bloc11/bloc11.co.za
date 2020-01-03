@@ -12,16 +12,20 @@ HTML = open('voucher_query.html').read()
 def index():
     return HTML
 
-@app.route("/bloc11voucher", methods=['POST'])
-def gen():
-    f = FPDF('P', 'mm', 'A4')
-    f.add_page()
-    f.image('voucher_template.png', 0, 0, MAX_X, MAX_Y)
-    f.set_font('Arial', '', 20)
-    f.text(70, 165, request.form['name'])
-    f.text(70, 201, request.form['reason'])
-    f.text(70, 236, request.form['extra'])
-    return Response(f.output(dest='S'), mimetype='application/pdf')
+#@app.route("/bloc11voucher", methods=['POST'])
+#def gen():
+f = FPDF('P', 'mm', 'A4')
+f.add_page()
+f.image('voucher_template.png', 0, 0, MAX_X, MAX_Y)
+f.set_font('Arial', '', 20)
+f.text(70, 165, 'Name')
+f.text(70, 201, 'Reason')
+f.text(70, 236, 'Extra')
+f.set_font('Arial', '', 14)
+f.text(165, 257, '123')
+f.output('bloc11voucher.pdf')
 
-if __name__ == '__main__':
-    app.run()
+#    return Response(f.output(dest='S'), mimetype='application/pdf')
+
+#if __name__ == '__main__':
+#    app.run()
