@@ -160,7 +160,7 @@ if len(sys.argv) > 1 and sys.argv[1] == '--create':
 
 resource = File(os.getcwd())
 resource.putChild("pay", Pay())
-resource.putChild("gen_pdf", GenPdf())
+resource.putChild("voucher_generator", GenPdf())
 resource.putChild("bloc11voucher", Bloc11Voucher())
 resource.putChild("donate", Donate())
 resource.putChild("finish_check", Finish())
