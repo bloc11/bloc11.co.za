@@ -45,6 +45,10 @@ class Bloc11Voucher(Resource):
     isLeaf = True
 
     def render_POST(self, request):
+        MAX_X = 210
+        MAX_Y = 297
+
+
         f = FPDF('P', 'mm', 'A4')
         f.add_page()
         f.image('voucher_template.png', 0, 0, MAX_X, MAX_Y)
