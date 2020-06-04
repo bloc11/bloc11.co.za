@@ -209,9 +209,9 @@
   var dynamicImg = document.getElementById('dynamic-image');
   var imgModal = document.getElementById('image-modal');
 
-  imgModal.addEventListener('click', function (e) {
-    imgModal.classList.add('closed');
-  });
+  // imgModal.addEventListener('click', function (e) {
+  //  imgModal.classList.add('closed');
+  // });
 
 
   for (var i = 0; i < images.length; ++i) {
