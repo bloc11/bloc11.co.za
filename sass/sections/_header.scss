@@ -11,6 +11,10 @@ header.main {
   
     a {
       color: $color-white;
+
+      svg path {
+        fill: $color-white;
+      }
     }
   
     &.floating {
@@ -20,6 +24,10 @@ header.main {
   
       a {
         color: $color-grey;
+
+        svg path {
+          fill: $color-grey;
+        }
       }
   
       nav[role=main] {
