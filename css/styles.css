@@ -1051,12 +1051,16 @@ header.main {
   transition: .3s ease-in-out; }
   header.main a {
     color: #fafbff; }
+    header.main a svg path {
+      fill: #fafbff; }
   header.main.floating {
     padding-top: 0;
     background-color: #fafbff;
     opacity: 0.95; }
     header.main.floating a {
       color: #373734; }
+      header.main.floating a svg path {
+        fill: #373734; }
     header.main.floating nav[role=main] ul li:before {
       color: #373734; }
 
@@ -1390,6 +1394,21 @@ nav[role=main] {
     .facilities .modal-content img {
       max-width: 600px;
       padding-bottom: 60px; }
+
+#physio-external {
+  position: relative;
+  top: 3px;
+  left: 4px; }
+  #physio-external:hover path {
+    fill: #F26522; }
+
+a.physio-external {
+  color: #F26522;
+  border: 0.1px solid #F26522;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 2rem; }
 
 @media screen and (min-width: 600px) {
   .facilities .right {

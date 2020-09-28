@@ -226,3 +226,11 @@
   }
 
 })();
+
+// Physio external link
+(function () {
+  document.getElementById("physio-external").addEventListener('click', function(ev) {
+    event.preventDefault();
+    window.location.replace("https://physio.bloc11.co.za/") 
+  })
+})();
