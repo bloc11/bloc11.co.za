@@ -1080,3 +1080,7 @@ nav[role=main] {
 .block {
   margin-bottom: 20px;
 }
+
+.cross-through {
+  text-decoration: line-through;
+}
