@@ -14,7 +14,7 @@ python -m SimpleHTTPServer 8080 index.html
 npm run build-sass
 
 # Minify the css file
-npm run minify
+npm run minify-css
 
 # Runs 'build-sass' then runs 'minify-css' when ever it detects changes to '.sass' and '.scss' files
 npm run watch-sass
