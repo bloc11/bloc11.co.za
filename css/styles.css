@@ -852,6 +852,9 @@ input[type=submit] {
   font-size: 14px;
   float: right; }
 
+.cross-through {
+  text-decoration: line-through; }
+
 section {
   padding-bottom: 80px;
   border-bottom: 5px solid #fafbff; }
@@ -1127,13 +1130,20 @@ nav[role=main] {
   z-index: 0;
   padding-top: 20vh;
   box-sizing: border-box; }
+  .welcome a.location-link {
+    color: #f26522;
+    padding-top: 0.5rem;
+    display: inline-block; }
   .welcome .img-container {
+    pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     overflow: hidden; }
+  .welcome .margin-top {
+    padding-top: 40px; }
   .welcome .img-full-screen {
     z-index: -10;
     position: absolute;
@@ -1153,6 +1163,10 @@ nav[role=main] {
     margin: 0 auto;
     text-align: center;
     color: #fafbff; }
+  .welcome .location-selection {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold; }
   .welcome .icon-logo {
     display: block;
     font-size: 25vh;

@@ -12,13 +12,25 @@
     box-sizing: border-box;
     // overflow: hidden;
 
+
+    a.location-link {
+      color: #f26522;
+      padding-top: 0.5rem;
+      display: inline-block;
+    }
+
     .img-container{
+      pointer-events: none;
       position: absolute;
       width: 100%; 
       height: 100%;
       top: 0; 
       left: 0;
       overflow: hidden;
+    }
+
+    .margin-top {
+      padding-top: 40px;
     }
 
     .img-full-screen{
@@ -42,6 +54,12 @@
       margin: 0 auto;
       text-align: center;
       color: $color-white;
+    }
+
+    .location-selection {
+      text-align: center;
+      font-size: 24pt;
+      font-weight: bold;
     }
   
     .icon-logo {
@@ -118,7 +136,7 @@
         height: 38px;
         margin: 0 10px;
       }
-  
+
       a {
         color: $color-white;
         font-size: 18px;
@@ -131,6 +149,7 @@
         }
       }
   
+      
       .icon-instagram {
         font-size: 16px
       }
