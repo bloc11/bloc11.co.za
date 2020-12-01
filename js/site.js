@@ -157,7 +157,9 @@
 (function () {
 
   // Order here slightly shuffled to simple avoid duplicates
-  var imgPaths = [
+  var imgPaths;
+  if (window.location.pathname.search('peiland') != -1) {
+    imgPaths = [
     //'/img/gallery/gallery-01.jpg',
     '/img/gallery/gallery-04.jpg',
     '/img/gallery/gallery-05.jpg',
@@ -177,7 +179,22 @@
     '/img/gallery/gallery-18.jpg',
     '/img/gallery/gallery-19.jpg',
     '/img/gallery/gallery-20.jpg'
-  ];
+    ];
+  } else {
+    //'/img/gallery/gallery-south-01.jpg',
+    //'/img/gallery/gallery-south-02.jpg',
+    //'/img/gallery/gallery-south-03.jpg',
+    //'/img/gallery/gallery-south-04.jpg',
+    imgPaths = [
+    '/img/gallery/gallery-south-05.jpg',
+    '/img/gallery/gallery-south-06.jpg',
+    '/img/gallery/gallery-south-07.jpg',
+    '/img/gallery/gallery-south-08.jpg',
+    '/img/gallery/gallery-south-09.jpg',
+    '/img/gallery/gallery-south-10.jpg',
+    '/img/gallery/gallery-south-11.jpg'
+    ]
+  }
 
   var currentImageIndex = 0;
   var currentPathIndex = 0;
